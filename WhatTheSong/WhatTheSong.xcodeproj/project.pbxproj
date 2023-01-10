@@ -11,6 +11,10 @@
 		04383B35296D206200C20294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B34296D206200C20294 /* ContentView.swift */; };
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
 		04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B39296D206300C20294 /* Preview Assets.xcassets */; };
+		04383B48296D25D700C20294 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B47296D25D700C20294 /* Sample.swift */; };
+		04383B4A296D25DE00C20294 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B49296D25DE00C20294 /* Sample.swift */; };
+		04383B4C296D25E400C20294 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B4B296D25E400C20294 /* Sample.swift */; };
+		04383B4E296D25EA00C20294 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B4D296D25EA00C20294 /* Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		04383B34296D206200C20294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04383B36296D206300C20294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04383B39296D206300C20294 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04383B47296D25D700C20294 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		04383B49296D25DE00C20294 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		04383B4B296D25E400C20294 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		04383B4D296D25EA00C20294 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
+				04383B45296D223600C20294 /* Common */,
+				04383B43296D21D100C20294 /* Detail */,
+				04383B42296D21B300C20294 /* Write */,
+				04383B40296D218B00C20294 /* Home */,
 				04383B36296D206300C20294 /* Assets.xcassets */,
 				04383B38296D206300C20294 /* Preview Content */,
 			);
@@ -65,6 +77,46 @@
 				04383B39296D206300C20294 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04383B40296D218B00C20294 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04383B4D296D25EA00C20294 /* Sample.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04383B42296D21B300C20294 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				04383B4B296D25E400C20294 /* Sample.swift */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		04383B43296D21D100C20294 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04383B49296D25DE00C20294 /* Sample.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		04383B45296D223600C20294 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04383B46296D224A00C20294 /* RecordCell */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04383B46296D224A00C20294 /* RecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				04383B47296D25D700C20294 /* Sample.swift */,
+			);
+			path = RecordCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04383B4C296D25E400C20294 /* Sample.swift in Sources */,
+				04383B4E296D25EA00C20294 /* Sample.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
+				04383B4A296D25DE00C20294 /* Sample.swift in Sources */,
+				04383B48296D25D700C20294 /* Sample.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
