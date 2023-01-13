@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CommentView: View {
+    @State private var selection: Int? = 0
+    @State var isPresent = false
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack{
                 Rectangle()
                     .frame(height: 0)
@@ -26,18 +29,28 @@ struct CommentView: View {
                 List {
                     ForEach(Dummy.comments.indices) { index in
                         VStack(alignment: .leading){
+
                             CommentCell(comment: Dummy.comments[index])
-                            
-                            //TODO: 답글 보기 버튼으로 수정
-                            Text("답글 보기")
-                                .foregroundColor(.yellow)
+                                
+                            Button(action: {
+                                isPresent = true
+                                selection = index
+                            }) {
+                                Text("답글 보기")
+                                    .foregroundColor(Color.yellow)
+                            }
+                            .buttonStyle(BorderlessButtonStyle())
                         }
+                        .navigationDestination(isPresented: $isPresent, destination: {
+                            ReCommentView(index: selection)
+                        })
                     }
                 }
                 .listStyle(.plain)
             }
             .navigationTitle("댓글")
             .navigationBarTitleDisplayMode(.large)
+            
             
         }
     }
@@ -53,9 +66,16 @@ struct CommentCell: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
                 Text(comment.date)
                 Spacer()
-                //TODO: Text("B") -> Button으로 수정
-                Text("B")
-                    .foregroundColor(.red)
+                
+                Button(action: {
+                    //TODO: 버튼 작동
+                    print("Tap")
+                }, label: {
+                    Image(systemName: "ellipsis")
+                        .foregroundColor(.black)
+
+                })
+                .buttonStyle(BorderlessButtonStyle())
             }
             
             Text(comment.content)

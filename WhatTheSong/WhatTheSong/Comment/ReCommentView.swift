@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ReCommentView: View {
+    var index: Int?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(String(index ?? 0))
     }
 }
 
 struct ReCommentView_Previews: PreviewProvider {
     static var previews: some View {
-        ReCommentView()
+        ReCommentView(index: 0)
     }
 }
