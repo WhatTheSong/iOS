@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		041843562971B7A900EC4778 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843552971B7A900EC4778 /* CommentView.swift */; };
 		041843592971C11700EC4778 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843582971C11700EC4778 /* Comment.swift */; };
+		0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418435C2971D17300EC4778 /* ReCommentView.swift */; };
 		04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B32296D206200C20294 /* WhatTheSongApp.swift */; };
 		04383B35296D206200C20294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B34296D206200C20294 /* ContentView.swift */; };
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		041843552971B7A900EC4778 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		041843582971C11700EC4778 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0418435C2971D17300EC4778 /* ReCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCommentView.swift; sourceTree = "<group>"; };
 		04383B2F296D206200C20294 /* WhatTheSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04383B32296D206200C20294 /* WhatTheSongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTheSongApp.swift; sourceTree = "<group>"; };
 		04383B34296D206200C20294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			children = (
 				041843552971B7A900EC4778 /* CommentView.swift */,
 				041843582971C11700EC4778 /* Comment.swift */,
+				0418435C2971D17300EC4778 /* ReCommentView.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041843562971B7A900EC4778 /* CommentView.swift in Sources */,
+				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				041843592971C11700EC4778 /* Comment.swift in Sources */,

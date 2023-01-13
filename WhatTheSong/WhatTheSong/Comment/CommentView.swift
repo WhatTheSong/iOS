@@ -25,7 +25,13 @@ struct CommentView: View {
                 
                 List {
                     ForEach(Dummy.comments.indices) { index in
-                        CommentCell(comment: Dummy.comments[index])
+                        VStack(alignment: .leading){
+                            CommentCell(comment: Dummy.comments[index])
+                            
+                            //TODO: 답글 보기 버튼으로 수정
+                            Text("답글 보기")
+                                .foregroundColor(.yellow)
+                        }
                     }
                 }
                 .listStyle(.plain)
@@ -55,9 +61,6 @@ struct CommentCell: View {
             Text(comment.content)
                 .padding(EdgeInsets(top: 1, leading: 1, bottom: 10, trailing: 1))
             
-            //TODO: 답글 보기 버튼으로 수정
-            Text("답글 보기")
-                .foregroundColor(.yellow)
         }
     }
 }
