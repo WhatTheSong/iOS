@@ -22,10 +22,42 @@ struct CommentView: View {
                     .background(Color.yellow)
                     
                 Spacer()
+                
+                List {
+                    ForEach(Dummy.comments.indices) { index in
+                        CommentCell(comment: Dummy.comments[index])
+                    }
+                }
+                .listStyle(.plain)
             }
             .navigationTitle("댓글")
             .navigationBarTitleDisplayMode(.large)
             
+        }
+    }
+}
+
+struct CommentCell: View {
+    let comment: Comment
+    
+    var body: some View {
+        VStack (alignment: .leading){
+            HStack {
+                Text(comment.name)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                Text(comment.date)
+                Spacer()
+                //TODO: Text("B") -> Button으로 수정
+                Text("B")
+                    .foregroundColor(.red)
+            }
+            
+            Text(comment.content)
+                .padding(EdgeInsets(top: 1, leading: 1, bottom: 10, trailing: 1))
+            
+            //TODO: 답글 보기 버튼으로 수정
+            Text("답글 보기")
+                .foregroundColor(.yellow)
         }
     }
 }
@@ -35,3 +67,5 @@ struct CommentView_Previews: PreviewProvider {
         CommentView()
     }
 }
+
+
