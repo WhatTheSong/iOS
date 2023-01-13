@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041843562971B7A900EC4778 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843552971B7A900EC4778 /* CommentView.swift */; };
 		04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B32296D206200C20294 /* WhatTheSongApp.swift */; };
 		04383B35296D206200C20294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B34296D206200C20294 /* ContentView.swift */; };
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041843552971B7A900EC4778 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		04383B2F296D206200C20294 /* WhatTheSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04383B32296D206200C20294 /* WhatTheSongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTheSongApp.swift; sourceTree = "<group>"; };
 		04383B34296D206200C20294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041843542971B79E00EC4778 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				041843552971B7A900EC4778 /* CommentView.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		04383B26296D206200C20294 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		04383B31296D206200C20294 /* WhatTheSong */ = {
 			isa = PBXGroup;
 			children = (
+				041843542971B79E00EC4778 /* Comment */,
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
 				04383B45296D223600C20294 /* Common */,
@@ -177,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041843562971B7A900EC4778 /* CommentView.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 			);
