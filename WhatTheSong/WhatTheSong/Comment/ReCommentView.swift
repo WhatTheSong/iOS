@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct ReCommentView: View {
-    var index: Int?
+    var index: Int
     
     var body: some View {
-        Text(String(index ?? 0))
+        NavigationStack {
+            VStack{
+                Rectangle()
+                    .frame(height: 0)
+                    .background(.ultraThinMaterial)
+                //TODO: 색 변경 필요
+                CommentCell(comment: Dummy.comments[index])
+                    .padding()
+                    .background(Color.teal)
+                List {
+                    ForEach(Dummy.comments.indices) { index in
+                        VStack(alignment: .leading){
+                            CommentCell(comment: Dummy.comments[index])
+                        }
+                    }
+                }
+                .listStyle(.plain)
+            }
+            .navigationTitle("답글")
+            .navigationBarTitleDisplayMode(.inline)
+            
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommentView: View {
-    @State private var selection: Int? = 0
+    @State private var selection: Int = 0
     @State var isPresent = false
     
     var body: some View {
@@ -33,7 +33,7 @@ struct CommentView: View {
                             CommentCell(comment: Dummy.comments[index])
                                 
                             Button(action: {
-                                isPresent = true
+                                isPresent.toggle()
                                 selection = index
                             }) {
                                 Text("답글 보기")
