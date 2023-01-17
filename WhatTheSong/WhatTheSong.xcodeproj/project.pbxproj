@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041843562971B7A900EC4778 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843552971B7A900EC4778 /* CommentView.swift */; };
+		041843592971C11700EC4778 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843582971C11700EC4778 /* Comment.swift */; };
+		0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418435C2971D17300EC4778 /* ReCommentView.swift */; };
 		04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B32296D206200C20294 /* WhatTheSongApp.swift */; };
 		04383B35296D206200C20294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B34296D206200C20294 /* ContentView.swift */; };
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
@@ -16,9 +19,22 @@
 		6FA23CC129718BD1003BD05A /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA23CBF29718BD1003BD05A /* RecordingDataModel.swift */; };
 		6FA23CC329718BEC003BD05A /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA23CC229718BEC003BD05A /* WriteView.swift */; };
 		6FA23CC529718C21003BD05A /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA23CC429718C21003BD05A /* AudioRecord.swift */; };
+
+		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
+		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
+		4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */; };
+		4F712342296DF970009D0073 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712341296DF970009D0073 /* RecordCell.swift */; };
+		4F712344296DFE31009D0073 /* ExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712343296DFE31009D0073 /* ExplainView.swift */; };
+		4F712346296E08A3009D0073 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712345296E08A3009D0073 /* PlayButton.swift */; };
+		4F7A66832973F64000B85A69 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A66822973F64000B85A69 /* AudioManager.swift */; };
+		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041843552971B7A900EC4778 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		041843582971C11700EC4778 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0418435C2971D17300EC4778 /* ReCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCommentView.swift; sourceTree = "<group>"; };
 		04383B2F296D206200C20294 /* WhatTheSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04383B32296D206200C20294 /* WhatTheSongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTheSongApp.swift; sourceTree = "<group>"; };
 		04383B34296D206200C20294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +45,15 @@
 		6FA23CBF29718BD1003BD05A /* RecordingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingDataModel.swift; path = "../../../../../iOS practice/backup/RecordingDataModel.swift"; sourceTree = "<group>"; };
 		6FA23CC229718BEC003BD05A /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		6FA23CC429718C21003BD05A /* AudioRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecord.swift; path = "../../../../../../iOS practice/backup/AudioRecord.swift"; sourceTree = "<group>"; };
+		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
+		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4F343D242974E390005AC7B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewModel.swift; sourceTree = "<group>"; };
+		4F712341296DF970009D0073 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		4F712343296DFE31009D0073 /* ExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExplainView.swift; path = ../../../../../../../.Trash/iOS/WhatTheSong/WhatTheSong/Common/RecordCell/ExplainView.swift; sourceTree = "<group>"; };
+		4F712345296E08A3009D0073 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		4F7A66822973F64000B85A69 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041843542971B79E00EC4778 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				041843552971B7A900EC4778 /* CommentView.swift */,
+				041843582971C11700EC4778 /* Comment.swift */,
+				0418435C2971D17300EC4778 /* ReCommentView.swift */,
+				04AB925A29763DEE00E7DDB7 /* CommentCell.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		04383B26296D206200C20294 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +99,8 @@
 			children = (
 				6FA23CBE29718BD1003BD05A /* ColorExtension.swift */,
 				6FA23CBF29718BD1003BD05A /* RecordingDataModel.swift */,
+				4F343D2329745BB9005AC7B0 /* Info.plist */,
+				041843542971B79E00EC4778 /* Comment */,
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
 				04383B45296D223600C20294 /* Common */,
@@ -86,7 +124,6 @@
 		04383B40296D218B00C20294 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				04383B4D296D25EA00C20294 /* Sample.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -118,6 +155,13 @@
 		04383B46296D224A00C20294 /* RecordCell */ = {
 			isa = PBXGroup;
 			children = (
+				4F712341296DF970009D0073 /* RecordCell.swift */,
+				4F712343296DFE31009D0073 /* ExplainView.swift */,
+				4F343D242974E390005AC7B0 /* Extensions.swift */,
+				4F712345296E08A3009D0073 /* PlayButton.swift */,
+				4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */,
+				4F7A66822973F64000B85A69 /* AudioManager.swift */,
+				4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */,
 			);
 			path = RecordCell;
 			sourceTree = "<group>";
@@ -180,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */,
 				04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */,
 				04383B37296D206300C20294 /* Assets.xcassets in Resources */,
 			);
@@ -199,6 +244,19 @@
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				6FA23CC029718BD1003BD05A /* ColorExtension.swift in Sources */,
+				4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */,
+				4F7A66832973F64000B85A69 /* AudioManager.swift in Sources */,
+				4F712344296DFE31009D0073 /* ExplainView.swift in Sources */,
+				4F343D252974E390005AC7B0 /* Extensions.swift in Sources */,
+				4F712346296E08A3009D0073 /* PlayButton.swift in Sources */,
+				04383B35296D206200C20294 /* ContentView.swift in Sources */,
+				4F712342296DF970009D0073 /* RecordCell.swift in Sources */,
+				041843562971B7A900EC4778 /* CommentView.swift in Sources */,
+				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
+				04383B35296D206200C20294 /* ContentView.swift in Sources */,
+				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
+				041843592971C11700EC4778 /* Comment.swift in Sources */,
+				04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +389,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위한 마이크 사용 권한 필요";
+				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,6 +420,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위한 마이크 사용 권한 필요";
+				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
