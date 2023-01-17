@@ -11,9 +11,13 @@
 		04383B35296D206200C20294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383B34296D206200C20294 /* ContentView.swift */; };
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
 		04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B39296D206300C20294 /* Preview Assets.xcassets */; };
+		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
+		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
+		4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */; };
 		4F712342296DF970009D0073 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712341296DF970009D0073 /* RecordCell.swift */; };
 		4F712344296DFE31009D0073 /* ExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712343296DFE31009D0073 /* ExplainView.swift */; };
 		4F712346296E08A3009D0073 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712345296E08A3009D0073 /* PlayButton.swift */; };
+		4F7A66832973F64000B85A69 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A66822973F64000B85A69 /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +26,14 @@
 		04383B34296D206200C20294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04383B36296D206300C20294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04383B39296D206300C20294 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
+		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4F343D242974E390005AC7B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewModel.swift; sourceTree = "<group>"; };
 		4F712341296DF970009D0073 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		4F712343296DFE31009D0073 /* ExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExplainView.swift; path = ../../../../../../../.Trash/iOS/WhatTheSong/WhatTheSong/Common/RecordCell/ExplainView.swift; sourceTree = "<group>"; };
 		4F712345296E08A3009D0073 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		4F7A66822973F64000B85A69 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 		04383B31296D206200C20294 /* WhatTheSong */ = {
 			isa = PBXGroup;
 			children = (
+				4F343D2329745BB9005AC7B0 /* Info.plist */,
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
 				04383B45296D223600C20294 /* Common */,
@@ -111,7 +121,11 @@
 			children = (
 				4F712341296DF970009D0073 /* RecordCell.swift */,
 				4F712343296DFE31009D0073 /* ExplainView.swift */,
+				4F343D242974E390005AC7B0 /* Extensions.swift */,
 				4F712345296E08A3009D0073 /* PlayButton.swift */,
+				4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */,
+				4F7A66822973F64000B85A69 /* AudioManager.swift */,
+				4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */,
 			);
 			path = RecordCell;
 			sourceTree = "<group>";
@@ -174,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */,
 				04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */,
 				04383B37296D206300C20294 /* Assets.xcassets in Resources */,
 			);
@@ -186,7 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */,
+				4F7A66832973F64000B85A69 /* AudioManager.swift in Sources */,
 				4F712344296DFE31009D0073 /* ExplainView.swift in Sources */,
+				4F343D252974E390005AC7B0 /* Extensions.swift in Sources */,
 				4F712346296E08A3009D0073 /* PlayButton.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				4F712342296DF970009D0073 /* RecordCell.swift in Sources */,
@@ -322,6 +340,7 @@
 				DEVELOPMENT_TEAM = TDUR55YWW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +370,7 @@
 				DEVELOPMENT_TEAM = TDUR55YWW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
