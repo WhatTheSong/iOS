@@ -37,5 +37,11 @@ struct Dummy {
                                               content: "오니")
                                       ]
     
+    static var reComments: [Comment] = [Comment(name: "익명1이름이길면?",
+                                                date: "2022/11/22",
+                                                content: "스트레이의 달이요"),
+                                        Comment(name: "익명2",
+                                                date: "2023/01/08",
+                                                content: "뉴진스의 하이프보이요")]
 }
 

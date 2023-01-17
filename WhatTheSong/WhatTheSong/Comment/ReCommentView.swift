@@ -19,11 +19,11 @@ struct ReCommentView: View {
                 //TODO: 색 변경 필요
                 CommentCell(comment: Dummy.comments[index])
                     .padding()
-                    .background(Color.teal)
+                    .background(Color.yellow)
                 List {
-                    ForEach(Dummy.comments.indices) { index in
+                    ForEach(Dummy.reComments.indices) { index in
                         VStack(alignment: .leading){
-                            CommentCell(comment: Dummy.comments[index])
+                            CommentCell(comment: Dummy.reComments[index])
                         }
                     }
                 }
