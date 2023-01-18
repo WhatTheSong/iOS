@@ -10,7 +10,7 @@ import SwiftUI
 struct ExplainView: View {
     var body: some View {
         Text("바꿔보자 깃허브에 제발 올라가줘......")
-            .frame(width: 200, height: 80)
+            .frame(width: 200, height: 60)
             .padding()
             .border(Color.gray.opacity(0.1), width: 1)
             .shadow(radius: 5)
