@@ -94,18 +94,18 @@
 		04383B31296D206200C20294 /* WhatTheSong */ = {
 			isa = PBXGroup;
 			children = (
+				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
+				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
+				04383B34296D206200C20294 /* ContentView.swift */,
 				4F343D2329745BB9005AC7B0 /* Info.plist */,
 				041843542971B79E00EC4778 /* Comment */,
-				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
-				04383B34296D206200C20294 /* ContentView.swift */,
 				04383B45296D223600C20294 /* Common */,
 				04383B43296D21D100C20294 /* Detail */,
 				04383B42296D21B300C20294 /* Write */,
 				04383B40296D218B00C20294 /* Home */,
 				04383B36296D206300C20294 /* Assets.xcassets */,
 				04383B38296D206300C20294 /* Preview Content */,
-				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 			);
 			path = WhatTheSong;
 			sourceTree = "<group>";
