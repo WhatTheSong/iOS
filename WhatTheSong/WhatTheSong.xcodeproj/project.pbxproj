@@ -15,6 +15,7 @@
 		04383B37296D206300C20294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B36296D206300C20294 /* Assets.xcassets */; };
 		04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383B39296D206300C20294 /* Preview Assets.xcassets */; };
 		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
+		04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB92682977C24300E7DDB7 /* DetailView.swift */; };
 		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
 		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
 		4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3DB07C2974528400B020D0 /* MeditationViewModel.swift */; };
@@ -38,6 +39,7 @@
 		04383B36296D206300C20294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04383B39296D206300C20294 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		04AB92682977C24300E7DDB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
 		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4F343D242974E390005AC7B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 				4F343D2329745BB9005AC7B0 /* Info.plist */,
 				041843542971B79E00EC4778 /* Comment */,
 				04383B45296D223600C20294 /* Common */,
-				04383B43296D21D100C20294 /* Detail */,
+				04AB92672977C23600E7DDB7 /* Detail */,
 				04383B42296D21B300C20294 /* Write */,
 				04383B40296D218B00C20294 /* Home */,
 				04383B36296D206300C20294 /* Assets.xcassets */,
@@ -134,16 +136,10 @@
 			path = Write;
 			sourceTree = "<group>";
 		};
-		04383B43296D21D100C20294 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		04383B45296D223600C20294 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04AB92642977C1D100E7DDB7 /* New Group */,
 				04383B46296D224A00C20294 /* RecordCell */,
 			);
 			path = Common;
@@ -168,6 +164,22 @@
 			children = (
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		04AB92642977C1D100E7DDB7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			path = "../Detail/WhatTheSong/Detail/New Group";
+			sourceTree = "<group>";
+		};
+		04AB92672977C23600E7DDB7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04AB92682977C24300E7DDB7 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +266,7 @@
 				4F712346296E08A3009D0073 /* PlayButton.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				4F712342296DF970009D0073 /* RecordCell.swift in Sources */,
+				04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */,
 				041843562971B7A900EC4778 /* CommentView.swift in Sources */,
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,

@@ -30,7 +30,7 @@ struct ReCommentView: View {
                 .listStyle(.plain)
             }
             .navigationTitle("답글")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             
         }
     }
