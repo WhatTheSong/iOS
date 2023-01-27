@@ -36,7 +36,7 @@ struct SignInWithAppleSwiftUIButton: View {
     }
 }
 
-struct AppleSignInView: View {
+struct AppleSignInButton: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -46,8 +46,8 @@ struct AppleSignInView: View {
     }
 }
 
-struct AppleSignInView_Previews: PreviewProvider {
+struct AppleSignInButton_Previews: PreviewProvider {
     static var previews: some View {
-        AppleSignInView()
+        AppleSignInButton()
     }
 }

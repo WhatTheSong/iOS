@@ -11,7 +11,7 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 
-struct KakaoSignInView: View {
+struct KakaoSignInButton: View {
     var body: some View {
         Button {
             if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -34,8 +34,8 @@ struct KakaoSignInView: View {
     }
 }
 
-struct KakaoSignInView_Previews: PreviewProvider {
+struct KakaoSignInButton_Previews: PreviewProvider {
     static var previews: some View {
-        KakaoSignInView()
+        KakaoSignInButton()
     }
 }
