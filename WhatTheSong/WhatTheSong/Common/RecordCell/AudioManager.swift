@@ -30,6 +30,7 @@ final class AudioManager: ObservableObject{
                 player?.prepareToPlay()
             }else{
                 player?.play()
+                
             }
 
         } catch {

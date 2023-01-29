@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecordCell: View {
-    @EnvironmentObject var audioManager: AudioManager
+    //@EnvironmentObject var audioManager: AudioManager
     var meditationVM: MeditationViewModel
     var isPreview : Bool = false
     @State private var isEditing: Bool = false
@@ -19,6 +19,8 @@ struct RecordCell: View {
         .autoconnect()
     
     var body: some View {
+        let audioManager = AudioManager()
+        let player = audioManager.player
         VStack(){
             HStack(){
                 Image("vynil")
@@ -33,14 +35,14 @@ struct RecordCell: View {
             .padding(15)
             
             HStack{
-                let player = audioManager.player
-                
                 // MARK: Play Button
                 PlayButton(systemName: player?.isPlaying ?? false ? "pause.circle" : "play.fill", action: {
                     if ((player?.isPlaying) != nil) {
                         audioManager.playPause()
                     } else {
+                        let _ = print("실행됨")
                         audioManager.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
+                        let _ = print("실행됨22222")
                     }
                 })
                 .padding(.trailing, 15)
@@ -72,6 +74,7 @@ struct RecordCell: View {
         }
         .padding(20)
         .onReceive(timer) { _ in
+            
             guard let player = audioManager.player, !isEditing else { return }
             silderValue = player.currentTime
         }
@@ -84,7 +87,7 @@ struct RecordCell: View {
 }
 
 struct RecordCell_Previews: PreviewProvider {
-    static let meditationVM = MeditationViewModel(meditation: Meditation.data)
+    static let meditationVM = MeditationViewModel(meditation: MeditationData.data[0])
     
     static var previews: some View {
         RecordCell(meditationVM: meditationVM, isPreview: true)

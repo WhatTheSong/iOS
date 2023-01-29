@@ -41,10 +41,14 @@ struct HomeView: View {
                 .frame(height: 20)
             // MARK: 테이블 뷰
             List(){
-                RecordCell(meditationVM: MeditationViewModel(meditation: Meditation.data))
-                    .frame(width: 350, height: 200)
-                
-                
+                ForEach(MeditationData.data.indices) { index in
+                    
+                    let _ = print("index : ", index)
+                    VStack(alignment: .leading){
+                        RecordCell(meditationVM: MeditationViewModel(meditation: MeditationData.data[index]))
+                    }
+                    //CommentCell(comment: Dummy.comments[index])
+                }
             }
             
             .listStyle(PlainListStyle())

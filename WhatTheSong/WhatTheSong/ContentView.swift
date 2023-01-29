@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        RecordCell(meditationVM: MeditationViewModel(meditation: Meditation.data))
+        HomeView()
     }
 }
 
