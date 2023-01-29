@@ -39,18 +39,15 @@ struct HomeView: View {
             
             Spacer()
                 .frame(height: 20)
+            
             // MARK: 테이블 뷰
             List(){
                 ForEach(MeditationData.data.indices) { index in
-                    
-                    let _ = print("index : ", index)
                     VStack(alignment: .leading){
                         RecordCell(meditationVM: MeditationViewModel(meditation: MeditationData.data[index]))
                     }
-                    //CommentCell(comment: Dummy.comments[index])
                 }
             }
-            
             .listStyle(PlainListStyle())
             .scrollContentBackground(.hidden)
         }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RecordCell: View {
-    //@EnvironmentObject var audioManager: AudioManager
-    var meditationVM: MeditationViewModel
+    @StateObject var audioManager = AudioManager()
+    var meditationVM : MeditationViewModel
     var isPreview : Bool = false
     @State private var isEditing: Bool = false
     @State private var silderValue: Double = 0.0
@@ -19,7 +19,6 @@ struct RecordCell: View {
         .autoconnect()
     
     var body: some View {
-        let audioManager = AudioManager()
         let player = audioManager.player
         VStack(){
             HStack(){
@@ -91,6 +90,5 @@ struct RecordCell_Previews: PreviewProvider {
     
     static var previews: some View {
         RecordCell(meditationVM: meditationVM, isPreview: true)
-            .environmentObject(AudioManager())
     }
 }
