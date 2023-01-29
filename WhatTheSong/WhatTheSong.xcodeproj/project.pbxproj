@@ -105,13 +105,13 @@
 		04383B31296D206200C20294 /* WhatTheSong */ = {
 			isa = PBXGroup;
 			children = (
-				048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */,
-				048BBE4E2982C39F002B4031 /* SignIn */,
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
-				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
-				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
 				4F343D2329745BB9005AC7B0 /* Info.plist */,
+				048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */,
+				048BBE4E2982C39F002B4031 /* SignIn */,
+				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
+				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
 				041843542971B79E00EC4778 /* Comment */,
 				04383B45296D223600C20294 /* Common */,
 				04AB92672977C23600E7DDB7 /* Detail */,
