@@ -39,9 +39,7 @@ struct RecordCell: View {
                     if ((player?.isPlaying) != nil) {
                         audioManager.playPause()
                     } else {
-                        let _ = print("실행됨")
                         audioManager.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
-                        let _ = print("실행됨22222")
                     }
                 })
                 .padding(.trailing, 15)
