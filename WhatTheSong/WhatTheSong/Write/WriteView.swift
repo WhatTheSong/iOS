@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WriteView: View {
     @ObservedObject var audioRecording = AudioRecord()
+    @ObservedObject var audioPlaying = AudioPlay()
     
     @State private var contents = ""
     @State private var placeholderText = "찾고 싶은 노래에 대해 설명 해주세요!"
@@ -17,29 +18,27 @@ struct WriteView: View {
         VStack {
             Image("vynil")
                 .padding(.bottom)
-            Text("00:00")
+            Text(audioRecording.timer)
                 .padding(.bottom)
             HStack {
                 Button(action: {
-                    if audioRecording.recordingList[audioRecording.recordingList.count-1].isPlaying == true {
-                        audioRecording.stopPlaying(url: audioRecording.recordingList[audioRecording.recordingList.count-1].fileURL)
+                    if audioPlaying.isPlaying == true {
+                        audioPlaying.stopPlaying(url: audioRecording.recordingList.last!.fileURL)
                         
                     }else{
-                        audioRecording.startPlaying(url: audioRecording.recordingList[audioRecording.recordingList.count-1].fileURL)
-                        print(audioRecording.recordingList[audioRecording.recordingList.count-1].fileURL)
+                        audioPlaying.startPlaying(url: audioRecording.recordingList.last!.fileURL)
+//                        let _ = print("헌 녹음 \(audioRecording.recordingObj!.fileURL)")
                     }
                 }) {
-                    Image(systemName: "play.fill")
-//                        .foregroundColor(Color.ourOrange)
+                    Image(systemName: audioPlaying.isPlaying ? "stop.fill" : "play.fill")
                 }
                 .padding(.trailing)
                 Button(action: {}) {
-                    Image(systemName: "record.circle")
+                    Image(systemName: audioRecording.isRecording ? "stop.circle.fill" : "record.circle")
                         .onTapGesture {
                             if audioRecording.isRecording == true {
                                 audioRecording.stopRecording()
                                 print("stop")
-                                print(audioRecording.recordingList.count)
                             } else {
                                 audioRecording.startRecording()
                                 print("start")
@@ -75,6 +74,6 @@ struct WriteView: View {
 
 struct WriteView_Previews: PreviewProvider {
     static var previews: some View {
-        WriteView()
+        WriteView(audioRecording: AudioRecord())
     }
 }

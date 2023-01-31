@@ -12,21 +12,21 @@ import AVFoundation
 
 class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
     
-    
-    let objectWillChange = PassthroughSubject<AudioRecord, Never>()
-    
     var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer!
     
     @Published var isRecording: Bool = false
     
     @Published var recordingList = [Recording]()
+    @Published var countSec = 0
+    @Published var timerCount: Timer?
+    @Published var timer: String = "0:00"
+    @Published var toggleColor: Bool = false
+    @Published var blinkingCount: Timer?
     
     override init() {
         super.init()
+        fetchRecording()
     }
-    
-    
     
     func startRecording() {
         let recordingSession = AVAudioSession.sharedInstance()
@@ -58,6 +58,12 @@ class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
             audioRecorder.record()
             isRecording = true
             
+            timerCount = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (value) in
+                self.countSec += 1
+                self.timer = self.covertSecToMinAndHour(seconds: self.countSec)
+            })
+            blinkColor()
+            
         } catch {
             print("녹음을 시작할 수 없습니다.")
         }
@@ -68,6 +74,11 @@ class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
         isRecording = false
         
         fetchRecording()
+        
+        self.countSec = 0
+        
+        timerCount!.invalidate()
+        blinkingCount!.invalidate()
     }
     
     func fetchRecording() {
@@ -77,67 +88,55 @@ class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let directoryContents = try! FileManager.default.contentsOfDirectory(at: path, includingPropertiesForKeys: nil)
         
         for audio in directoryContents {
-            recordingList.append(Recording(fileURL : audio, isPlaying: false))
+            recordingList.append(Recording(fileURL : audio, createdAt: getFileDate(for: audio)))
         }
         
-//        recordings.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
+        recordingList.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
+    }
+    
+    
+//    func deleteRecording(url: URL) {
+//        do {
+//            try FileManager.default.removeItem(at : url)
+//        } catch {
+//            print("Can't delete")
+//        }
+//
+//        for i in 0..<recordingList.count {
+//            if recordingList[i].fileURL == url {
+//                if recordingList[i].isPlaying == true {
+//                    stopPlaying(url: recordingList[i].fileURL)
+//                }
+//                recordingList.remove(at : i)
+//                break
+//            }
+//        }
+//    }
+    
+    // file 날짜 추출
+    func getFileDate(for file: URL) -> Date {
+        if let attributes = try? FileManager.default.attributesOfItem(atPath: file.path) as [FileAttributeKey: Any],
+            let creationDate = attributes[FileAttributeKey.creationDate] as? Date {
+            return creationDate
+        } else {
+            return Date()
+        }
+    }
+    
+    // 시간 단위 변환
+    func covertSecToMinAndHour(seconds : Int) -> String{
+        
+        let (_,m,s) = (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+        let sec : String = s < 10 ? "0\(s)" : "\(s)"
+        return "\(m):\(sec)"
         
     }
     
-    func startPlaying(url : URL) {
-      
-        let playSession = AVAudioSession.sharedInstance()
-            
-        do {
-            try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-        } catch {
-            print("Playing failed in Device")
-        }
-            
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf : url)
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
-                
-            for i in 0..<recordingList.count{
-                if recordingList[i].fileURL == url{
-                    recordingList[i].isPlaying = true
-                }
-            }
-                
-        } catch {
-            print("Playing Failed")
-        }
-                
-    }
-
-    func stopPlaying(url : URL){
-      
-        audioPlayer.stop()
-      
-        for i in 0..<recordingList.count {
-            if recordingList[i].fileURL == url {
-                recordingList[i].isPlaying = false
-            }
-        }
-      
-    }
-    
-    func deleteRecording(url: URL) {
-        do {
-            try FileManager.default.removeItem(at : url)
-        } catch {
-            print("Can't delete")
-        }
+    func blinkColor() {
         
-        for i in 0..<recordingList.count {
-            if recordingList[i].fileURL == url {
-                if recordingList[i].isPlaying == true {
-                    stopPlaying(url: recordingList[i].fileURL)
-                }
-                recordingList.remove(at : i)
-                break
-            }
-        }
+        blinkingCount = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { (value) in
+            self.toggleColor.toggle()
+        })
+        
     }
 }
