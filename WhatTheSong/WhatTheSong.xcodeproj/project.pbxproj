@@ -19,6 +19,9 @@
 		048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */; };
 		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
 		04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB92682977C24300E7DDB7 /* DetailView.swift */; };
+		04C2C4A429895DF100B5316B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4A329895DF100B5316B /* Notification.swift */; };
+		04C2C4AD298A0A9C00B5316B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */; };
+		04C2C4D3298A1FCD00B5316B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2C4D2298A1FCD00B5316B /* FirebaseMessaging */; };
 		04DB067A29843CB4003A78EC /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB067929843CB4003A78EC /* ButtonStackView.swift */; };
 		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
 		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
@@ -48,6 +51,8 @@
 		048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInButton.swift; sourceTree = "<group>"; };
 		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		04AB92682977C24300E7DDB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		04C2C4A329895DF100B5316B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DB067929843CB4003A78EC /* ButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackView.swift; sourceTree = "<group>"; };
 		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
 		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C2C4D3298A1FCD00B5316B /* FirebaseMessaging in Frameworks */,
 				048BBE562982CFE7002B4031 /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,8 +115,11 @@
 			children = (
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
+				04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */,
 				4F343D2329745BB9005AC7B0 /* Info.plist */,
 				048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */,
+				04383B36296D206300C20294 /* Assets.xcassets */,
+				04C2C4A229895DE100B5316B /* Notification */,
 				048BBE4E2982C39F002B4031 /* SignIn */,
 				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
@@ -119,7 +128,6 @@
 				04AB92672977C23600E7DDB7 /* Detail */,
 				04383B42296D21B300C20294 /* Write */,
 				04383B40296D218B00C20294 /* Home */,
-				04383B36296D206300C20294 /* Assets.xcassets */,
 				04383B38296D206300C20294 /* Preview Content */,
 			);
 			path = WhatTheSong;
@@ -206,6 +214,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		04C2C4A229895DE100B5316B /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				04C2C4A329895DF100B5316B /* Notification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +240,7 @@
 			name = WhatTheSong;
 			packageProductDependencies = (
 				048BBE552982CFE7002B4031 /* KakaoSDK */,
+				04C2C4D2298A1FCD00B5316B /* FirebaseMessaging */,
 			);
 			productName = WhatTheSong;
 			productReference = 04383B2F296D206200C20294 /* WhatTheSong.app */;
@@ -255,6 +272,7 @@
 			mainGroup = 04383B26296D206200C20294;
 			packageReferences = (
 				048BBE542982CFE7002B4031 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				04C2C4D1298A1FCD00B5316B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 04383B30296D206200C20294 /* Products */;
 			projectDirPath = "";
@@ -271,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */,
+				04C2C4AD298A0A9C00B5316B /* GoogleService-Info.plist in Resources */,
 				04383B3A296D206300C20294 /* Preview Assets.xcassets in Resources */,
 				04383B37296D206300C20294 /* Assets.xcassets in Resources */,
 			);
@@ -304,6 +323,7 @@
 				6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */,
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
+				04C2C4A429895DF100B5316B /* Notification.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				041843592971C11700EC4778 /* Comment.swift in Sources */,
 				04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */,
@@ -523,6 +543,14 @@
 				kind = branch;
 			};
 		};
+		04C2C4D1298A1FCD00B5316B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -530,6 +558,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 048BBE542982CFE7002B4031 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDK;
+		};
+		04C2C4D2298A1FCD00B5316B /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C2C4D1298A1FCD00B5316B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
