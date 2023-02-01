@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RecordCell: View {
-    @EnvironmentObject var audioManager: AudioManager
-    var meditationVM: MeditationViewModel
+    @StateObject var audioManager = AudioManager()
+    var meditationVM : MeditationViewModel
     var isPreview : Bool = false
     @State private var isEditing: Bool = false
     @State private var silderValue: Double = 0.0
@@ -19,22 +19,21 @@ struct RecordCell: View {
         .autoconnect()
     
     var body: some View {
+        let player = audioManager.player
         VStack(){
             HStack(){
                 Image("vynil")
                     .resizable()
-                    .frame(width: 100,height: 100)
+                    .frame(width: 80,height: 80)
                 
                 Spacer()
-                    .frame(width: 20)
+                    .frame(width: 15)
                 
                 ExplainView()
             }
-            .padding(20)
+            .padding(15)
             
             HStack{
-                let player = audioManager.player
-                
                 // MARK: Play Button
                 PlayButton(systemName: player?.isPlaying ?? false ? "pause.circle" : "play.fill", action: {
                     if ((player?.isPlaying) != nil) {
@@ -70,21 +69,24 @@ struct RecordCell: View {
                 }
             }
         }
-        //.border(Color.gray.opacity(1), width: 1)
         .padding(20)
         .onReceive(timer) { _ in
+            
             guard let player = audioManager.player, !isEditing else { return }
             silderValue = player.currentTime
         }
+        .padding(-15)
+        .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(.gray, lineWidth: 4))
         
     }
+    
 }
 
 struct RecordCell_Previews: PreviewProvider {
-    static let meditationVM = MeditationViewModel(meditation: Meditation.data)
+    static let meditationVM = MeditationViewModel(meditation: MeditationData.data[0])
     
     static var previews: some View {
         RecordCell(meditationVM: meditationVM, isPreview: true)
-            .environmentObject(AudioManager())
     }
 }
