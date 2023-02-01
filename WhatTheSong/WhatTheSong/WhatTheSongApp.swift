@@ -13,8 +13,9 @@ struct WhatTheSongApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(audioManager)
+//            ContentView()
+//                .environmentObject(audioManager)
+            WriteView()
         }
     }
 }
