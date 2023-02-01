@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommentCell: View {
+    @State private var showingBottomView = false
     let comment: Comment
     
     var body: some View {
@@ -22,14 +23,19 @@ struct CommentCell: View {
                 Spacer()
                 
                 Button(action: {
-                    //TODO: 버튼 작동
-                    print("Tap")
+                    showingBottomView.toggle()
                 }, label: {
                     Image(systemName: "ellipsis")
                         .foregroundColor(.black)
 
                 })
                 .buttonStyle(BorderlessButtonStyle())
+                .confirmationDialog("신고하기", isPresented: $showingBottomView,titleVisibility: .hidden) {
+                    Button("신고하기") {
+                        //TODO: 신고 기능 넣기
+                        print("HI")
+                    }
+                }
             }
             
             Text(comment.content)

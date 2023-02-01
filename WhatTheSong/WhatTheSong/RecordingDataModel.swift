@@ -9,5 +9,6 @@ import Foundation
 
 struct Recording {
     let fileURL: URL
-    var isPlaying : Bool
+    var createdAt: Date
+//    var isPlaying : Bool
 }

@@ -22,7 +22,7 @@ struct CommentView: View {
                     .font(.system(size: 14,weight:.semibold))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical,10)
-                    .background(Color.yellow)
+                    .background(Color.ourOrange)
                     
                 Spacer()
                 
@@ -37,7 +37,7 @@ struct CommentView: View {
                                 selection = index
                             }) {
                                 Text("답글 보기")
-                                    .foregroundColor(Color.yellow)
+                                    .foregroundColor(Color.ourOrange)
                             }
                             .buttonStyle(BorderlessButtonStyle())
                         }
