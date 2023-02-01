@@ -19,18 +19,15 @@
 		048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */; };
 		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
 		04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB92682977C24300E7DDB7 /* DetailView.swift */; };
-
+		04C2C4A429895DF100B5316B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4A329895DF100B5316B /* Notification.swift */; };
+		04C2C4AD298A0A9C00B5316B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */; };
+		04C2C4D3298A1FCD00B5316B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2C4D2298A1FCD00B5316B /* FirebaseMessaging */; };
 		04C2C4DE298A49B900B5316B /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4DD298A49B900B5316B /* AccountManager.swift */; };
 		04C2C4E4298A4AB900B5316B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4E3298A4AB900B5316B /* Account.swift */; };
 		04C2C4E9298A4FEB00B5316B /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4E8298A4FEB00B5316B /* URLs.swift */; };
 		04C2C4EC298A510800B5316B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4EB298A510800B5316B /* APIManager.swift */; };
 		04C2C4F0298A571000B5316B /* ParameterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4EF298A571000B5316B /* ParameterManager.swift */; };
 		04C2C4F2298A629E00B5316B /* SignInPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4F1298A629E00B5316B /* SignInPlatform.swift */; };
-
-		04C2C4A429895DF100B5316B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4A329895DF100B5316B /* Notification.swift */; };
-		04C2C4AD298A0A9C00B5316B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */; };
-		04C2C4D3298A1FCD00B5316B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2C4D2298A1FCD00B5316B /* FirebaseMessaging */; };
-
 		04DB067A29843CB4003A78EC /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB067929843CB4003A78EC /* ButtonStackView.swift */; };
 		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
 		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
@@ -61,17 +58,14 @@
 		048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInButton.swift; sourceTree = "<group>"; };
 		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		04AB92682977C24300E7DDB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-
+		04C2C4A329895DF100B5316B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04C2C4DD298A49B900B5316B /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		04C2C4E3298A4AB900B5316B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		04C2C4E8298A4FEB00B5316B /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		04C2C4EB298A510800B5316B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		04C2C4EF298A571000B5316B /* ParameterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterManager.swift; sourceTree = "<group>"; };
 		04C2C4F1298A629E00B5316B /* SignInPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPlatform.swift; sourceTree = "<group>"; };
-
-		04C2C4A329895DF100B5316B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-
 		04DB067929843CB4003A78EC /* ButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackView.swift; sourceTree = "<group>"; };
 		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
 		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -133,23 +127,16 @@
 		04383B31296D206200C20294 /* WhatTheSong */ = {
 			isa = PBXGroup;
 			children = (
-				04C2C4D9298A45FE00B5316B /* Data */,
-				04C2C4D4298A45E100B5316B /* Network */,
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
-				04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */,
+				04EB7E9D298A855600C1BD6C /* Presenter */,
+				04C2C4D9298A45FE00B5316B /* Data */,
+				04C2C4D4298A45E100B5316B /* Network */,
+				04EB7E9F298A858000C1BD6C /* Util */,
 				4F343D2329745BB9005AC7B0 /* Info.plist */,
+				04C2C4AC298A0A9C00B5316B /* GoogleService-Info.plist */,
 				048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */,
 				04383B36296D206300C20294 /* Assets.xcassets */,
-				04C2C4A229895DE100B5316B /* Notification */,
-				048BBE4E2982C39F002B4031 /* SignIn */,
-				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
-				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
-				041843542971B79E00EC4778 /* Comment */,
-				04383B45296D223600C20294 /* Common */,
-				04AB92672977C23600E7DDB7 /* Detail */,
-				04383B42296D21B300C20294 /* Write */,
-				04383B40296D218B00C20294 /* Home */,
 				04383B38296D206300C20294 /* Preview Content */,
 			);
 			path = WhatTheSong;
@@ -161,13 +148,6 @@
 				04383B39296D206300C20294 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		04383B40296D218B00C20294 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		04383B42296D21B300C20294 /* Write */ = {
@@ -183,8 +163,6 @@
 		04383B45296D223600C20294 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4FC9138D297782C100FA4EC3 /* HomeView.swift */,
-				04AB92642977C1D100E7DDB7 /* New Group */,
 				04383B46296D224A00C20294 /* RecordCell */,
 			);
 			path = Common;
@@ -221,20 +199,20 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		04AB92642977C1D100E7DDB7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			path = "../Detail/WhatTheSong/Detail/New Group";
-			sourceTree = "<group>";
-		};
 		04AB92672977C23600E7DDB7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				04AB92682977C24300E7DDB7 /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		04C2C4A229895DE100B5316B /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				04C2C4A329895DF100B5316B /* Notification.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		04C2C4D4298A45E100B5316B /* Network */ = {
@@ -250,6 +228,7 @@
 		04C2C4D9298A45FE00B5316B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				04EB7E9C298A854D00C1BD6C /* Model */,
 				04C2C4E1298A4A6800B5316B /* DTO */,
 			);
 			path = Data;
@@ -287,14 +266,52 @@
 				04C2C4EB298A510800B5316B /* APIManager.swift */,
 			);
 			path = API;
-      sourceTree = "<group>";
-     };
-		04C2C4A229895DE100B5316B /* Notification */ = {
+			sourceTree = "<group>";
+		};
+		04EB7E9C298A854D00C1BD6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04C2C4A329895DF100B5316B /* Notification.swift */,
+				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 			);
-			path = Notification;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04EB7E9D298A855600C1BD6C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				04383B45296D223600C20294 /* Common */,
+				04EB7E9E298A856A00C1BD6C /* Home */,
+				04AB92672977C23600E7DDB7 /* Detail */,
+				04383B42296D21B300C20294 /* Write */,
+				041843542971B79E00EC4778 /* Comment */,
+				048BBE4E2982C39F002B4031 /* SignIn */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		04EB7E9E298A856A00C1BD6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4FC9138D297782C100FA4EC3 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04EB7E9F298A858000C1BD6C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				04EB7EA0298A859200C1BD6C /* Extension */,
+				04C2C4A229895DE100B5316B /* Notification */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		04EB7EA0298A859200C1BD6C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6F32500A2976D52C00BE5F55 /* ColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
