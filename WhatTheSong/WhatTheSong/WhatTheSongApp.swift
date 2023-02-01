@@ -21,6 +21,7 @@ struct WhatTheSongApp: App {
     
     var body: some Scene {
         WindowGroup {
+
             ContentView()
                 .environmentObject(audioManager)
                 .onOpenURL { url in
@@ -28,6 +29,7 @@ struct WhatTheSongApp: App {
                         AuthController.handleOpenUrl(url: url)
                     }
                 }
+
         }
     }
 }
