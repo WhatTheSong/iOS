@@ -13,6 +13,7 @@ struct DetailView: View {
         VStack {
             NavigationStack {
                 RecordCell(meditation: MeditationData.data[0])
+
                     .navigationTitle("아 그 노래 뭐더라 ")
                     .navigationBarTitleDisplayMode(.inline)
                 Spacer()
