@@ -60,7 +60,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
 
 @main
 struct WhatTheSongApp: App {
-    @StateObject var audioManager = AudioManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     init() {
@@ -70,15 +69,12 @@ struct WhatTheSongApp: App {
     
     var body: some Scene {
         WindowGroup {
-
             ContentView()
-                .environmentObject(audioManager)
                 .onOpenURL { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         AuthController.handleOpenUrl(url: url)
                     }
                 }
-
         }
     }
 }
