@@ -44,7 +44,7 @@ struct HomeView: View {
             List(){
                 ForEach(MeditationData.data.indices) { index in
                     VStack(alignment: .leading){
-                        RecordCell(meditationVM: MeditationViewModel(meditation: MeditationData.data[index]))
+                        RecordCell(meditation : MeditationData.data[index])
                     }
                 }
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecordCell: View {
     @StateObject var audioManager = AudioManager()
-    var meditationVM : MeditationViewModel
+    let meditation: Meditation
     var isPreview : Bool = false
     @State private var isEditing: Bool = false
     @State private var silderValue: Double = 0.0
@@ -39,7 +39,7 @@ struct RecordCell: View {
                     if ((player?.isPlaying) != nil) {
                         audioManager.playPause()
                     } else {
-                        audioManager.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
+                        audioManager.startPlayer(track: meditation.track, isPreview: isPreview)
                     }
                 })
                 .padding(.trailing, 15)
@@ -62,7 +62,7 @@ struct RecordCell: View {
                         
                         Spacer()
                         
-                        Text((DateComponentsFormatter.positional.string(from: meditationVM.meditation.duration - (player?.currentTime ?? 0.0)) ?? ""))
+                        Text((DateComponentsFormatter.positional.string(from: meditation.duration - (player?.currentTime ?? 0.0)) ?? ""))
                     }
                     .font(.caption)
                     .foregroundColor(.gray)
@@ -84,9 +84,7 @@ struct RecordCell: View {
 }
 
 struct RecordCell_Previews: PreviewProvider {
-    static let meditationVM = MeditationViewModel(meditation: MeditationData.data[0])
-    
     static var previews: some View {
-        RecordCell(meditationVM: meditationVM, isPreview: true)
+        RecordCell(meditation: MeditationData.data[0])
     }
 }
