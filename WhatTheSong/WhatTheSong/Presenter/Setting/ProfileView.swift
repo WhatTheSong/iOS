@@ -17,6 +17,9 @@ struct ProfileView: View {
                 List{
                     Section {
                         TextField("이름 입력하세요", text: $name)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10, style: .circular)     .stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2)
+                                    .frame(width: 350, height: 40))
                     } header: {
                         Text("이름")
                     } footer: {

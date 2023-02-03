@@ -12,12 +12,23 @@ struct SettingView: View {
         NavigationStack{
             List{
                 Section {
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
-                        Text("이름")
+                    VStack{
+                        NavigationLink {
+                            ProfileView()
+                        } label: {
+                            VStack{
+                                Text("이름 : ")
+                                Spacer()
+                                    .frame(height: 20)
+                                Text("email : ")
+                            }
+                        }
+                        .multilineTextAlignment(.leading)
+
                     }
-                    Button("email"){}
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10, style: .circular)     .stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2)
+                            .frame(width: 350, height: 82))
                 }
                 
                 Section {
@@ -25,6 +36,7 @@ struct SettingView: View {
                     Button("문의하기"){}
                     Button("앱 버전"){}
                 }
+                
             }
             .navigationTitle("설정")
         }
