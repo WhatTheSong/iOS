@@ -12,7 +12,9 @@ struct RecommendDetailView: View {
         VStack {
             NavigationStack {
                 // 게시글 사진
-                Text("사진")
+                Image("vynil")
+                    .resizable()
+                    .frame(width:100,height: 100)
                 // 좋아요 숫자
                 Text("좋아요 숫자")
                 // 게시글 내용
