@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CategoryCell: View {
     var content: String
+    var isFilled: Bool = false
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
-            .foregroundColor(.white)
+            .foregroundColor(isFilled ? Color.ourOrange : .white)
             .frame(width: 75, height: 25)
             .overlay(RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.ourOrange, lineWidth: 2)
