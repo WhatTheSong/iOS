@@ -11,7 +11,7 @@ import Alamofire
 
 class AccountManager {
     func postAccount(account: AccountModel, platform: SignInPlatform) {
-        let url: String
+        var url: String
         switch platform {
         case .Apple:
             url = URLs.testURL + URLs.appleUserURL
