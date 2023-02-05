@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DetailView: View {
-    @State var showingBottom = true
     var body: some View {
         VStack {
             NavigationStack {
@@ -30,6 +29,5 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView()
-            .environmentObject(AudioManager())
     }
 }
