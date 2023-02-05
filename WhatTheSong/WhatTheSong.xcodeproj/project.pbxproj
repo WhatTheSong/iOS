@@ -33,6 +33,8 @@
 		6F32500B2976D52C00BE5F55 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F32500A2976D52C00BE5F55 /* ColorExtension.swift */; };
 		6F32500D2976D57500BE5F55 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */; };
 		6F5533762976D6D300E02E10 /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5533752976D6D300E02E10 /* AudioRecord.swift */; };
+		6F72FB6A298EA6EE00378201 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F72FB69298EA6EE00378201 /* ImagePicker.swift */; };
+		6F72FB6C298EAF5700378201 /* WriteRecommendSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F72FB6B298EAF5700378201 /* WriteRecommendSongView.swift */; };
 		6FA23CC329718BEC003BD05A /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA23CC229718BEC003BD05A /* WriteView.swift */; };
 		6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1C63029865E050033D1F4 /* AudioPlay.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		6F32500A2976D52C00BE5F55 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
 		6F5533752976D6D300E02E10 /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
+		6F72FB69298EA6EE00378201 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		6F72FB6B298EAF5700378201 /* WriteRecommendSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRecommendSongView.swift; sourceTree = "<group>"; };
 		6FA23CC229718BEC003BD05A /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		6FD1C63029865E050033D1F4 /* AudioPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,8 @@
 				04383B42296D21B300C20294 /* Write */,
 				04383B40296D218B00C20294 /* Home */,
 				04383B38296D206300C20294 /* Preview Content */,
+				6F72FB69298EA6EE00378201 /* ImagePicker.swift */,
+				6F72FB6B298EAF5700378201 /* WriteRecommendSongView.swift */,
 			);
 			path = WhatTheSong;
 			sourceTree = "<group>";
@@ -305,12 +311,14 @@
 				6FA23CC329718BEC003BD05A /* WriteView.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
+				6F72FB6A298EA6EE00378201 /* ImagePicker.swift in Sources */,
 				6F32500D2976D57500BE5F55 /* RecordingDataModel.swift in Sources */,
 				04DB067A29843CB4003A78EC /* ButtonStackView.swift in Sources */,
 				6F5533762976D6D300E02E10 /* AudioRecord.swift in Sources */,
 				048BBE502982C3B3002B4031 /* AppleSignInButton.swift in Sources */,
 				4F61BBF82976CC5200F53D38 /* ExplainView.swift in Sources */,
 				4F3DB07D2974528400B020D0 /* MeditationViewModel.swift in Sources */,
+				6F72FB6C298EAF5700378201 /* WriteRecommendSongView.swift in Sources */,
 				4F7A66832973F64000B85A69 /* AudioManager.swift in Sources */,
 				6F32500B2976D52C00BE5F55 /* ColorExtension.swift in Sources */,
 				048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */,
@@ -461,6 +469,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위한 마이크 사용 권한 필요";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 업로드를 위한 앨범 접근 권한 필요";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +502,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhatTheSong/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위한 마이크 사용 권한 필요";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 업로드를 위한 앨범 접근 권한 필요";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
