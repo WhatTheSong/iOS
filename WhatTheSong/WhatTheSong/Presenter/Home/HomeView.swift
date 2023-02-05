@@ -11,15 +11,8 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             VStack(){
+                TitleView(title: "질문", tabbarItem: .Home)
                 
-                Spacer()
-                
-                Divider()
-                    .frame(width: UIScreen.screenWidth-30, height: 3)
-                    .background(Color.ourOrange)
-                
-                Spacer()
-                    .frame(height: 20)
                 
                 // MARK: 테이블 뷰
                 List(){
@@ -32,8 +25,6 @@ struct HomeView: View {
                 .listStyle(PlainListStyle())
                 .scrollContentBackground(.hidden)
             }
-            .navigationTitle("왓쏭 - What Song")
-            
         }
     }
     
