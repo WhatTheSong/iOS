@@ -1,5 +1,5 @@
 //
-//  ButtonStackView.swift
+//  SignInButtonStackView.swift
 //  WhatTheSong
 //
 //  Created by 강민규 on 2023/01/28.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonStackView: View {
+struct SignInButtonStackView: View {
     var body: some View {
         VStack {
             Spacer()
@@ -35,6 +35,6 @@ struct ButtonStackView: View {
 
 struct ButtonStackView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonStackView()
+        SignInButtonStackView()
     }
 }

@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        RecordCell(meditationVM: MeditationViewModel(meditation: Meditation.data))
-        ButtonStackView()
+        ReportView(title: "안녕", nickname: "승진")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(AudioManager())
     }
 }
