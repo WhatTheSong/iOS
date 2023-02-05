@@ -22,13 +22,13 @@ struct RecommendDetailView: View {
                     VStack {
                         Spacer()
                         Text("내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용")
-                            .background(.red)
+                            
                     }
                 }
                 .padding(.bottom, UIScreen.screenHeight - 375)
                 .navigationTitle("아 그 노래 뭐더라 ")
                 .navigationBarTitleDisplayMode(.inline)
-                .background(.blue)
+                
                 
             }
             .overlay(alignment: .bottom) {

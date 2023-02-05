@@ -14,24 +14,9 @@ struct RecommendView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                HStack {
-                    Text("추천")
-                        .font(.system(size: 32, weight: .bold))
-                        .padding(.leading, 20)
-                    Spacer()
-                    Button {
-                        print("About tapped!")
-                    } label: {
-                        Image(systemName: "square.and.pencil")
-                            .foregroundColor(.black)
-                            .font(.system(size: 18, weight: .semibold))
-                    }
-                    .padding(.trailing, 20)
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                
-                
+            VStack(spacing: 0) {
+                TitleView(title: "추천", tabbarItem: .Recommend)
+            
                 List {
                     Section{
                         categoryHeader(title: "카테고리")

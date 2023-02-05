@@ -21,6 +21,8 @@
 		04654BA2298F615800BE56E4 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654BA1298F615800BE56E4 /* ThumbnailView.swift */; };
 		04654BA4298F8F6800BE56E4 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654BA3298F8F6800BE56E4 /* CategoryListView.swift */; };
 		04654BA6298F94BD00BE56E4 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654BA5298F94BD00BE56E4 /* CategoryListCell.swift */; };
+		04654BA9298FA2BE00BE56E4 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654BA8298FA2BE00BE56E4 /* TitleView.swift */; };
+		04654BAC298FA35F00BE56E4 /* TabbarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654BAB298FA35F00BE56E4 /* TabbarItems.swift */; };
 		048BBE502982C3B3002B4031 /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */; };
 		048BBE562982CFE7002B4031 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 048BBE552982CFE7002B4031 /* KakaoSDK */; };
 		048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */; };
@@ -68,6 +70,8 @@
 		04654BA1298F615800BE56E4 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		04654BA3298F8F6800BE56E4 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		04654BA5298F94BD00BE56E4 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		04654BA8298FA2BE00BE56E4 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		04654BAB298FA35F00BE56E4 /* TabbarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItems.swift; sourceTree = "<group>"; };
 		048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatTheSong.entitlements; sourceTree = "<group>"; };
 		048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInButton.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		04383B45296D223600C20294 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04654BA7298FA0EB00BE56E4 /* Title */,
 				041843542971B79E00EC4778 /* Comment */,
 				04383B46296D224A00C20294 /* RecordCell */,
 			);
@@ -228,6 +233,22 @@
 				04654BA1298F615800BE56E4 /* ThumbnailView.swift */,
 			);
 			path = Thumbnail;
+			sourceTree = "<group>";
+		};
+		04654BA7298FA0EB00BE56E4 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				04654BA8298FA2BE00BE56E4 /* TitleView.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		04654BAA298FA34700BE56E4 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				04654BAB298FA35F00BE56E4 /* TabbarItems.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		048BBE4E2982C39F002B4031 /* SignIn */ = {
@@ -348,6 +369,7 @@
 		04EB7E9F298A858000C1BD6C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				04654BAA298FA34700BE56E4 /* Constant */,
 				04EB7EA0298A859200C1BD6C /* Extension */,
 				04C2C4A229895DE100B5316B /* Notification */,
 			);
@@ -448,6 +470,7 @@
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				04C2C4EC298A510800B5316B /* APIManager.swift in Sources */,
 				6F32500D2976D57500BE5F55 /* RecordingDataModel.swift in Sources */,
+				04654BAC298FA35F00BE56E4 /* TabbarItems.swift in Sources */,
 				04C2C4E9298A4FEB00B5316B /* URLs.swift in Sources */,
 				04654B9A298E482500BE56E4 /* RecommendDetailView.swift in Sources */,
 				04DB067A29843CB4003A78EC /* SignInButtonStackView.swift in Sources */,
@@ -477,6 +500,7 @@
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
 				04C2C4E4298A4AB900B5316B /* Account.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
+				04654BA9298FA2BE00BE56E4 /* TitleView.swift in Sources */,
 				04C2C4A429895DF100B5316B /* Notification.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				04654B98298E470200BE56E4 /* RecommendView.swift in Sources */,
