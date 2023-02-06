@@ -31,7 +31,8 @@ struct SettingView: View {
                             .frame(width: 350, height: 82))
                 }
                 
-                Section{
+                
+                Group{
                     Toggle(isOn: $toggling){
                         Text("알림설정")
                     }
@@ -48,6 +49,9 @@ struct SettingView: View {
                         Text("1.0.0")
                     }
                 }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10, style: .circular)     .stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2)
+                        .frame(width: 350, height: 10))
             }
             .navigationTitle("설정")
             .scrollContentBackground(.hidden)
