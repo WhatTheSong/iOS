@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SettingView: View {
     @State var toggling = false
-    let nickname: String
-    let email: String
+    let nickname: String = "nil"
+    let email: String = "nil"
     
     var body: some View {
         NavigationStack{
@@ -69,6 +69,6 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView(nickname: "정승진", email: "gnu.ac.kr")
+        SettingView()
     }
 }
