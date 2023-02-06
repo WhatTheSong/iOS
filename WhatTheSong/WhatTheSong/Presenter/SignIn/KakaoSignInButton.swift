@@ -33,7 +33,6 @@ struct KakaoSignInButton: View {
         } else {
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                getUserInfo()
-
             }
         }
     }
@@ -47,12 +46,13 @@ struct KakaoSignInButton: View {
             }
             else {
                 print("me() success.")
-                let userId: Int = Int(user?.id ?? 0)
+                
+                let userId: String = String(user?.id ?? 0)
                 let nickName: String = user?.kakaoAccount?.profile?.nickname ?? "Nil"
                 let email: String =  user?.kakaoAccount?.email ?? "Nil"
                 account = AccountModel(oauthId: userId  ,nickname: nickName, email: email)
-                guard let result = account else { return }
                 
+                guard let result = account else { return }
                 apiManager.postAccount(account: result, platform: .Kakao)
             }
         }

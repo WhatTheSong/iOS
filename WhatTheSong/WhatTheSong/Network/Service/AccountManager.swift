@@ -19,7 +19,7 @@ class AccountManager {
             url = URLs.testURL + URLs.kakaoUserURL
         }
         
-        APIManager.request(url: url, params: ParameterManager.makeAccountParameter(account: account))
+        APIManager.request(url: url, params: ParameterManager.makeKakaoAccountParameter(account: account))
         
     }
 }
