@@ -8,12 +8,13 @@
 import Foundation
 
 class ParameterManager {
-    static func makeAccountParameter(account: AccountModel) -> Dictionary<String, Any> {
-
+    // MARK: - Sign In
+    static func makeKakaoAccountParameter(account: AccountModel) -> Dictionary<String, Any> {
         let params = ["oauthId": account.oauthId,
                       "nickname": account.nickname,
                       "email": account.email] as Dictionary
         
         return params
     }
+
 }

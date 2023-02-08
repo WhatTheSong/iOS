@@ -34,4 +34,8 @@ class APIManager {
             }
         }
     }
+    
+    func gett() {
+        
+    }
 }
