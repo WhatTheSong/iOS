@@ -11,6 +11,7 @@ import AuthenticationServices
 
 struct SignInWithAppleSwiftUIButton: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var userSession: UserSession
     var apiManager = AccountManager()
     
     var body: some View {
@@ -36,19 +37,21 @@ struct SignInWithAppleSwiftUIButton: View {
                 }
                 
                 if let email = credential.email {
-                    print("email: \(email)")
                     UserDefaults.standard.setValue(email, forKey: "AppleEmail")
                 }
                 
                 if let fullName = credential.fullName {
                     guard let family = fullName.familyName, let given = fullName.givenName else { return }
                     let finalName = "\(family) \(given)"
-                    print("nickname: \(finalName)")
                     UserDefaults.standard.setValue(finalName, forKey: "AppleName")
                 }
                 
+                // 담기 전에, 원래 있던 Apple Id 값이랑
+                // 방금 들고온 ID 값이랑 비교를 해서
+                // 같아야지 원래 있던 Apple 정보들을 들고오게
+            
                 let user = credential.user
-                print(user)
+                
                 UserDefaults.standard.setValue(user, forKey: "AppleID")
                 
                 let email = UserDefaults.standard.string(forKey: "AppleEmail")
@@ -58,7 +61,7 @@ struct SignInWithAppleSwiftUIButton: View {
 //                let account: AccountModel = AccountModel(oauthId: id , nickname: name, email: email)
                 
                 print(email, name, id)
-                
+                userSession.signIn()
 //                apiManager.postAccount(account: account , platform: .Apple)
                 
                 

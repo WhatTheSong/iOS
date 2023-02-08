@@ -26,6 +26,7 @@
 		048BBE502982C3B3002B4031 /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */; };
 		048BBE562982CFE7002B4031 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 048BBE552982CFE7002B4031 /* KakaoSDK */; };
 		048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */; };
+		04A8930E299370F300D3DC40 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8930D299370F300D3DC40 /* UserSession.swift */; };
 		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
 		04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB92682977C24300E7DDB7 /* DetailView.swift */; };
 		04C2C4A429895DF100B5316B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4A329895DF100B5316B /* Notification.swift */; };
@@ -83,6 +84,7 @@
 		048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatTheSong.entitlements; sourceTree = "<group>"; };
 		048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInButton.swift; sourceTree = "<group>"; };
+		04A8930D299370F300D3DC40 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		04AB92682977C24300E7DDB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		04C2C4A329895DF100B5316B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
+				04A8930C299370E200D3DC40 /* Environment */,
 				04EB7E9D298A855600C1BD6C /* Presenter */,
 				04C2C4D9298A45FE00B5316B /* Data */,
 				04C2C4D4298A45E100B5316B /* Network */,
@@ -276,6 +279,14 @@
 				04DB067929843CB4003A78EC /* SignInButtonStackView.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		04A8930C299370E200D3DC40 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				04A8930D299370F300D3DC40 /* UserSession.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		04AB925D2976CDB800E7DDB7 /* Recovered References */ = {
@@ -546,6 +557,7 @@
 				04654B9D298ED8E100BE56E4 /* CategoryView.swift in Sources */,
 				6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */,
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
+				04A8930E299370F300D3DC40 /* UserSession.swift in Sources */,
 				04C2C4E4298A4AB900B5316B /* Account.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04654BA9298FA2BE00BE56E4 /* TitleView.swift in Sources */,

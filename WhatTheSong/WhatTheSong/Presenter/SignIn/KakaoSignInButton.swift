@@ -12,6 +12,7 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 struct KakaoSignInButton: View {
+    @EnvironmentObject var userSession: UserSession
     var apiManager = AccountManager()
     var body: some View {
         Button {
@@ -28,11 +29,12 @@ struct KakaoSignInButton: View {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                getUserInfo()
-               
+                userSession.signIn()
             }
         } else {
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                getUserInfo()
+                userSession.signIn()
             }
         }
     }
