@@ -11,17 +11,22 @@ struct WriteRecommendSongView: View {
     
     @State var showImagePicker = false
     @State var selectedUIImage: UIImage?
+    @State var selectedImageName: String?
     @State var image: Image?
+    @State var imgName: String?
     @State private var title = ""
     @State private var titlePlaceholderText = "제목"
     @State private var contents = ""
     @State private var contentsPlaceholderText = "내용"
-    var fileName: String = "파일 업로드"
     var category: String = "카테고리 선택하기"
+    
+    @State private var showingCategoryView = false
+
     
     func loadImage() {
         guard let selectedImage = selectedUIImage else { return }
         image = Image(uiImage: selectedImage)
+        imgName = selectedImageName
     }
     
     var body: some View {
@@ -36,16 +41,6 @@ struct WriteRecommendSongView: View {
                     .foregroundColor(.gray)
                     .frame(width: 200, height: 200)
             }
-            
-//            Button(action: {showImagePicker.toggle()}) {
-//                Image(systemName: "photo")
-//            }
-//            .sheet(isPresented: $showImagePicker, onDismiss: {
-//                loadImage()
-//            }) {
-//                ImagePicker(image: $selectedUIImage)
-//            }
-            
             ZStack {
                 if self.title.isEmpty {
                     TextEditor(text: $titlePlaceholderText)
@@ -61,7 +56,7 @@ struct WriteRecommendSongView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.ourOrange, lineWidth: 1))
                     .opacity(self.title.isEmpty ? 0.7 : 1)
-            }.padding(.horizontal, 30)
+            }.padding(.init(top: 30, leading: 30, bottom: 0, trailing: 30))
             
             ZStack {
                 if self.contents.isEmpty {
@@ -78,7 +73,7 @@ struct WriteRecommendSongView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.ourOrange, lineWidth: 1))
                     .opacity(self.contents.isEmpty ? 0.7 : 1)
-            }.padding(.horizontal, 30)
+            }.padding(.init(top: 0, leading: 30, bottom: 30, trailing: 30))
             
             
             HStack {
@@ -88,19 +83,35 @@ struct WriteRecommendSongView: View {
                 .sheet(isPresented: $showImagePicker, onDismiss: {
                     loadImage()
                 }) {
-                    ImagePicker(image: $selectedUIImage)
+                    ImagePicker(image: $selectedUIImage, imageName: $selectedImageName)
                 }
                 .padding(.leading, 30)
                 Spacer()
                 
-                Text(fileName)
-                    .padding(.trailing, 30)
+                if let imgName = imgName {
+                    Text(imgName)
+                        .padding(.trailing, 30)
+                        .lineLimit(1)
+                    
+
+                } else {
+                    Text("파일 첨부하기")
+                        .padding(.trailing, 30)
+                }
+                
+                
             }
             
             HStack {
-                Button(action: { }) {
+                Button(action: {
+                    showingCategoryView.toggle()
+                }) {
                     Image("category")
                 }.padding(.leading, 30)
+                    .sheet(isPresented: $showingCategoryView) {
+                        Text("카테고리 뷰")
+                            .presentationDetents([.medium ,.large])
+                    }
                 Spacer()
                 
                 Text(category)
