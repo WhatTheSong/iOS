@@ -138,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				041843552971B7A900EC4778 /* CommentView.swift */,
-				041843582971C11700EC4778 /* Comment.swift */,
 				0418435C2971D17300EC4778 /* ReCommentView.swift */,
 				04AB925A29763DEE00E7DDB7 /* CommentCell.swift */,
 			);
@@ -368,6 +367,7 @@
 		04EB7E9C298A854D00C1BD6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041843582971C11700EC4778 /* Comment.swift */,
 				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 			);
 			path = Model;

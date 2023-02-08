@@ -10,6 +10,7 @@ import SwiftUI
 struct CommentView: View {
     @State private var selection: Int = 0
     @State var isPresent = false
+    @Binding var isShowingReportView: Bool
     
     var body: some View {
         NavigationStack {
@@ -30,7 +31,7 @@ struct CommentView: View {
                     ForEach(Dummy.comments.indices) { index in
                         VStack(alignment: .leading){
 
-                            CommentCell(comment: Dummy.comments[index])
+                            CommentCell(isShowingReportView: $isShowingReportView, comment: Dummy.comments[index])
                                 
                             Button(action: {
                                 isPresent.toggle()
@@ -42,7 +43,7 @@ struct CommentView: View {
                             .buttonStyle(BorderlessButtonStyle())
                         }
                         .navigationDestination(isPresented: $isPresent, destination: {
-                            ReCommentView(index: selection)
+                            ReCommentView(index: selection, isShowingReportView: $isShowingReportView)
                         })
                     }
                 }
@@ -58,7 +59,7 @@ struct CommentView: View {
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView()
+        CommentView(isShowingReportView: .constant(false))
     }
 }
 
