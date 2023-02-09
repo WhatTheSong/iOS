@@ -29,7 +29,7 @@ struct RecordCell: View {
                 Spacer()
                     .frame(width: 15)
                 
-                ExplainView()
+                ExplainView(content: "가나다라마바사아자차카타파하")
             }
             .padding(15)
             
@@ -69,15 +69,14 @@ struct RecordCell: View {
                 }
             }
         }
-        .padding(20)
+        .padding(5)
         .onReceive(timer) { _ in
             
             guard let player = audioManager.player, !isEditing else { return }
             silderValue = player.currentTime
         }
-        .padding(-15)
         .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(.gray, lineWidth: 4))
+                    .stroke(Color.ourOrange, lineWidth: 2))
         
     }
     

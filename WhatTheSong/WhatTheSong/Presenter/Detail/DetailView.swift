@@ -23,6 +23,7 @@ struct DetailView: View {
                     .offset(x:0,y:280)
             }
         }
+        .accessibilityElement()
     }
 }
 

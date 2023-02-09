@@ -8,26 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var navigationIsShowing = false //뷰 전환 위한 변수
+
     var body: some View {
         NavigationStack{
-            VStack(){
-                TitleView(title: "질문", tabbarItem: .Home)
-                
+            VStack{
+                TitleView(title: "왓쏭 - What Song", tabbarItem: .Home)
                 
                 // MARK: 테이블 뷰
-                List(){
+                ScrollView{
+                    Spacer()
+                    
                     ForEach(MeditationData.data.indices) { index in
-                        VStack(alignment: .leading){
+                        NavigationLink(destination: DetailView()) {
                             RecordCell(meditation : MeditationData.data[index])
                         }
                     }
+                    .onTapGesture {
+                        navigationIsShowing = true
+                    }
                 }
-                .listStyle(PlainListStyle())
+                .frame(width: UIScreen.screenWidth - 20)
                 .scrollContentBackground(.hidden)
             }
         }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {

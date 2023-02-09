@@ -14,25 +14,29 @@ struct SettingView: View {
     
     var body: some View {
         NavigationStack{
-            Form{
-                Section {
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
-                        VStack(alignment: .leading){
-                            Text("이름 : \(nickname)")
-                            Spacer()
-                                .frame(height: 20)
-                            Text("email : \(email)")
-                        }
-                    }
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10, style: .circular)     .stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2)
-                            .frame(width: 350, height: 82))
-                }
-                
+            VStack(spacing: 40){
+                TitleView(title: "설정", tabbarItem: .Profile)
                 
                 Group{
+                    List{
+                        NavigationLink {
+                            ProfileView()
+                        } label: {
+                            VStack(alignment: .leading){
+                                Text("이름 : \(nickname)")
+                                Spacer()
+                                    .frame(height: 20)
+                                Text("email : \(email)")
+                            }
+                        }
+                    }
+                    .listStyle(InsetListStyle())
+                }
+                .frame(width:UIScreen.screenWidth-45, height: 80)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2))
+                
+                List{
                     Toggle(isOn: $toggling){
                         Text("알림설정")
                     }
@@ -49,12 +53,14 @@ struct SettingView: View {
                         Text("1.0.0")
                     }
                 }
+                .listStyle(InsetListStyle())
+                .frame(width:UIScreen.screenWidth-45, height: 130)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10, style: .circular)     .stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2)
-                        .frame(width: 350, height: 10))
+                    RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2))
             }
-            .navigationTitle("설정")
-            .scrollContentBackground(.hidden)
+            
+            Spacer()
+                .frame(height: 60)
             
             VStack{
                 LogoutButton()
@@ -62,10 +68,15 @@ struct SettingView: View {
                     .frame(height: 15)
                 LeaveButton()
             }
-            .offset(x:0, y:-150)
+            
+            Spacer()
         }
+        .scrollContentBackground(.hidden)
+        
+        
     }
 }
+
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
