@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum RecordCellLocation {
+    case Home
+    case NotHome
+}

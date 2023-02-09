@@ -14,6 +14,8 @@ struct RecordCell: View {
     @State private var isEditing: Bool = false
     @State private var silderValue: Double = 0.0
     
+    var recordCellLocation: RecordCellLocation
+    
     let timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
@@ -21,17 +23,37 @@ struct RecordCell: View {
     var body: some View {
         let player = audioManager.player
         VStack(){
-            HStack(){
-                Image("vynil")
-                    .resizable()
-                    .frame(width: 80,height: 80)
-                
-                Spacer()
-                    .frame(width: 15)
-                
-                ExplainView(content: "가나다라마바사아자차카타파하")
+            
+            if recordCellLocation == .Home {
+                NavigationView{
+                    NavigationLink(destination: DetailView()) {
+                        HStack(){
+                            Image("vynil")
+                                .resizable()
+                                .frame(width: 80,height: 80)
+                            
+                            Spacer()
+                                .frame(width: 30)
+                            
+                            ExplainView(content: "가나다라마바사아자차카타파하")
+                        }
+                    }
+                }
+                .frame(height: 120)
+            } else {
+                HStack(){
+                    Image("vynil")
+                        .resizable()
+                        .frame(width: 80,height: 80)
+                    
+                    Spacer()
+                        .frame(width: 30)
+                    
+                    ExplainView(content: "가나다라마바사아자차카타파하")
+                }
+                .frame(height: 120)
             }
-            .padding(15)
+            
             
             HStack{
                 // MARK: Play Button
@@ -84,6 +106,6 @@ struct RecordCell: View {
 
 struct RecordCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecordCell(meditation: MeditationData.data[0])
+        RecordCell(meditation: MeditationData.data[0], recordCellLocation: .Home)
     }
 }

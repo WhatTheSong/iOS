@@ -11,7 +11,7 @@ struct DetailView: View {
     var body: some View {
         VStack {
             NavigationStack {
-                RecordCell(meditation: MeditationData.data[0])
+                RecordCell(meditation: MeditationData.data[0], recordCellLocation: .NotHome)
 
                     .navigationTitle("아 그 노래 뭐더라 ")
                     .navigationBarTitleDisplayMode(.inline)

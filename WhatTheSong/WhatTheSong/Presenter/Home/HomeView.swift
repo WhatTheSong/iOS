@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var navigationIsShowing = false //뷰 전환 위한 변수
-
     var body: some View {
         NavigationStack{
             VStack{
@@ -20,12 +18,7 @@ struct HomeView: View {
                     Spacer()
                     
                     ForEach(MeditationData.data.indices) { index in
-                        NavigationLink(destination: DetailView()) {
-                            RecordCell(meditation : MeditationData.data[index])
-                        }
-                    }
-                    .onTapGesture {
-                        navigationIsShowing = true
+                        RecordCell(meditation : MeditationData.data[index], recordCellLocation: .Home)
                     }
                 }
                 .frame(width: UIScreen.screenWidth - 20)
