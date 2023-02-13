@@ -29,6 +29,10 @@ struct MeditationData{
                                      Meditation(title: "9999",
                                                 description: "9999",
                                                 duration: 500,
+                                                track: "ShapeOfYou2"),
+                                     Meditation(title: "9999",
+                                                description: "9999",
+                                                duration: 500,
                                                 track: "ShapeOfYou2")
                                       ]
 }

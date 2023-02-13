@@ -14,7 +14,7 @@ struct DetailView: View {
 
     var body: some View {
         NavigationStack {
-            RecordCell(meditation: MeditationData.data[0])
+            RecordCell(meditation: MeditationData.data[0], recordCellLocation: .NotHome)
                 .toolbar {
                     ToolbarItem {
                         Button(action: {
@@ -55,6 +55,7 @@ struct DetailView: View {
             }
             .animation(.easeIn, value: isShowingReportView)
         }
+        .accessibilityElement()
     }
 }
 

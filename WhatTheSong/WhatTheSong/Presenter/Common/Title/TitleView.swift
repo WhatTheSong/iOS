@@ -16,8 +16,9 @@ struct TitleView: View {
                 .font(.system(size: 32, weight: .bold))
                 .padding(.leading, 20)
             Spacer()
-            Button {
-                let _ = print("About tapped!")
+            
+            NavigationLink {
+                WriteView()
             } label: {
                 Image(systemName: "square.and.pencil")
                     .foregroundColor(.black)
