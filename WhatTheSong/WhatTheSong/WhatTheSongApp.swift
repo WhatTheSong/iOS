@@ -87,6 +87,7 @@ struct WhatTheSongApp: App {
                         .transition(.move(edge: .top))
                         .environmentObject(userSession)
                 }
+
             }
             .animation(.easeIn, value: userSession.isAccess())
         }

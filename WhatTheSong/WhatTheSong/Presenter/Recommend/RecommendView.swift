@@ -12,6 +12,14 @@ struct RecommendView: View {
     let people = ["서근", "슬기", "나비", "희진"]
     let categories = ["발라드", "뮤지컬", "락", "댄스", "힙합", "K-POP", "클래식", "POP"]
     
+    @State var selectedCategoryNameFinal: String?
+    @State var categoryNameFinal: String?
+    
+    func setCategoryName() {
+        self.categoryNameFinal = selectedCategoryNameFinal
+        print("마지막 \(categoryNameFinal)")
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -20,7 +28,7 @@ struct RecommendView: View {
                 List {
                     Section{
                         categoryHeader(title: "카테고리")
-                        CategoryView()
+                        CategoryView(stateOfCategory: .small, categoryName: $selectedCategoryNameFinal)
                             .listRowSeparator(.hidden)
                     }
                     ForEach(categories, id: \.self) { category in

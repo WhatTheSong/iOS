@@ -23,7 +23,7 @@ struct CategoryListView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    CategoryCell(content: category, isFilled: true)
+                    CategoryCell(content: category, stateOfCategroy: .small, isFilled: true)
                 }
             }
             .listStyle(.inset)
