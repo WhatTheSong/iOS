@@ -8,7 +8,7 @@
 import Foundation
 
 struct AccountModel: Codable {
-    let oauthId: Int
+    let oauthId: String
     let nickname: String
     let email: String
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SignInButtonStackView: View {
+    
+    @EnvironmentObject var userSession: UserSession
+    
     var body: some View {
         VStack {
             Spacer()
@@ -19,7 +22,9 @@ struct SignInButtonStackView: View {
             .padding(20)
             .font(.system(size: 28,weight:.bold))
             AppleSignInButton()
+                .environmentObject(userSession)
             KakaoSignInButton()
+                .environmentObject(userSession)
             Spacer()
             HStack {
                 Spacer()
