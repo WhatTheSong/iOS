@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct LogoutButton: View {
+    @EnvironmentObject var userSession: UserSession
+    
     var body: some View {
         Button(action: {
-            
+            userSession.signOut()
         }) {
                 Text("로그아웃")
                     .padding()

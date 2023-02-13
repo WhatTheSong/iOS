@@ -26,6 +26,7 @@
 		048BBE502982C3B3002B4031 /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */; };
 		048BBE562982CFE7002B4031 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 048BBE552982CFE7002B4031 /* KakaoSDK */; };
 		048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */; };
+		04A8930E299370F300D3DC40 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8930D299370F300D3DC40 /* UserSession.swift */; };
 		04AB925B29763DEE00E7DDB7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB925A29763DEE00E7DDB7 /* CommentCell.swift */; };
 		04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB92682977C24300E7DDB7 /* DetailView.swift */; };
 		04C2C4A429895DF100B5316B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2C4A329895DF100B5316B /* Notification.swift */; };
@@ -42,6 +43,7 @@
 		4F1F0EC8298E7A94001EED7C /* LeaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F0EC7298E7A94001EED7C /* LeaveButton.swift */; };
 		4F1F0ED0298EA43E001EED7C /* ReportSendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F0ECF298EA43E001EED7C /* ReportSendView.swift */; };
 		4F1F0ED6298EBA08001EED7C /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F0ED5298EBA08001EED7C /* UIScreenExtension.swift */; };
+		4F2568572994F3CC00B8A602 /* RecordCellLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2568562994F3CC00B8A602 /* RecordCellLocation.swift */; };
 		4F343D2229745A9A005AC7B0 /* ShapeOfYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */; };
 		4F343D252974E390005AC7B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F343D242974E390005AC7B0 /* Extensions.swift */; };
 		4F396277298BB1B300B1548E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F396276298BB1B300B1548E /* Meditation.swift */; };
@@ -84,6 +86,7 @@
 		048BBE4F2982C3B3002B4031 /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		048BBE512982C6CC002B4031 /* WhatTheSong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatTheSong.entitlements; sourceTree = "<group>"; };
 		048BBE572982D2FB002B4031 /* KakaoSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInButton.swift; sourceTree = "<group>"; };
+		04A8930D299370F300D3DC40 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		04AB925A29763DEE00E7DDB7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		04AB92682977C24300E7DDB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		04C2C4A329895DF100B5316B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		4F1F0EC7298E7A94001EED7C /* LeaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveButton.swift; sourceTree = "<group>"; };
 		4F1F0ECF298EA43E001EED7C /* ReportSendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSendView.swift; sourceTree = "<group>"; };
 		4F1F0ED5298EBA08001EED7C /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		4F2568562994F3CC00B8A602 /* RecordCellLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCellLocation.swift; sourceTree = "<group>"; };
 		4F343D2129745A99005AC7B0 /* ShapeOfYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShapeOfYou.mp3; sourceTree = "<group>"; };
 		4F343D2329745BB9005AC7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4F343D242974E390005AC7B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -138,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				041843552971B7A900EC4778 /* CommentView.swift */,
-				041843582971C11700EC4778 /* Comment.swift */,
 				0418435C2971D17300EC4778 /* ReCommentView.swift */,
 				04AB925A29763DEE00E7DDB7 /* CommentCell.swift */,
 			);
@@ -167,6 +170,7 @@
 			children = (
 				04383B32296D206200C20294 /* WhatTheSongApp.swift */,
 				04383B34296D206200C20294 /* ContentView.swift */,
+				04A8930C299370E200D3DC40 /* Environment */,
 				04EB7E9D298A855600C1BD6C /* Presenter */,
 				04C2C4D9298A45FE00B5316B /* Data */,
 				04C2C4D4298A45E100B5316B /* Network */,
@@ -267,6 +271,7 @@
 			children = (
 				04654BAB298FA35F00BE56E4 /* TabbarItems.swift */,
 				6FF2652C29936D78000311F7 /* StateOfCategory.swift */,
+				4F2568562994F3CC00B8A602 /* RecordCellLocation.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -279,6 +284,14 @@
 				04DB067929843CB4003A78EC /* SignInButtonStackView.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		04A8930C299370E200D3DC40 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				04A8930D299370F300D3DC40 /* UserSession.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		04AB925D2976CDB800E7DDB7 /* Recovered References */ = {
@@ -360,6 +373,7 @@
 		04EB7E9C298A854D00C1BD6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041843582971C11700EC4778 /* Comment.swift */,
 				6F32500C2976D57500BE5F55 /* RecordingDataModel.swift */,
 			);
 			path = Model;
@@ -537,6 +551,7 @@
 				04654BA4298F8F6800BE56E4 /* CategoryListView.swift in Sources */,
 				04654BA6298F94BD00BE56E4 /* CategoryListCell.swift in Sources */,
 				04C2C4F0298A571000B5316B /* ParameterManager.swift in Sources */,
+				4F2568572994F3CC00B8A602 /* RecordCellLocation.swift in Sources */,
 				4F1F0ED0298EA43E001EED7C /* ReportSendView.swift in Sources */,
 				048BBE582982D2FB002B4031 /* KakaoSignInButton.swift in Sources */,
 				4F343D252974E390005AC7B0 /* Extensions.swift in Sources */,
@@ -550,6 +565,7 @@
 				04654B9D298ED8E100BE56E4 /* CategoryView.swift in Sources */,
 				6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */,
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
+				04A8930E299370F300D3DC40 /* UserSession.swift in Sources */,
 				04C2C4E4298A4AB900B5316B /* Account.swift in Sources */,
 				04383B35296D206200C20294 /* ContentView.swift in Sources */,
 				04654BA9298FA2BE00BE56E4 /* TitleView.swift in Sources */,
