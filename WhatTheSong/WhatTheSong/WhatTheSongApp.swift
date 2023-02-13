@@ -75,6 +75,7 @@ struct WhatTheSongApp: App {
                         AuthController.handleOpenUrl(url: url)
                     }
                 }
+//            WriteRecommendSongView()
         }
     }
 }
