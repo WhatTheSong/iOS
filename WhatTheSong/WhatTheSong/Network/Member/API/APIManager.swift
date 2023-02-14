@@ -13,7 +13,7 @@ class APIManager {
     static func request(url: String, params: Dictionary<String, Any>) {
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = HTTPMethod.post.rawValue
-    
+        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         request.timeoutInterval = 10
@@ -28,14 +28,11 @@ class APIManager {
         AF.request(request).responseString { (response) in
             switch response.result {
             case .success:
+                print(response.description)
                 print("POST 성공")
             case .failure(let error):
                 print("error : \(error.errorDescription!)")
             }
         }
-    }
-    
-    func gett() {
-        
     }
 }
