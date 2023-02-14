@@ -14,8 +14,7 @@ public enum URLs {
     
     // Account
     public static let tokenURL = "/app/users/token"
-    public static let appleUserURL = "/app/users/oauth/apple"
-    public static let kakaoUserURL = "/app/users/oauth/kakao"
+    public static let userURL = "/app/users/oauth"
     public static let editProfileURL = "/app/users/edit-profile"
     public static let editNotiURL = "/app/users/edit-notification"
     public static let deleteUserURL = "/app/users/"

@@ -55,7 +55,7 @@ struct KakaoSignInButton: View {
                 account = AccountModel(oauthId: userId  ,nickname: nickName, email: email)
                 
                 guard let result = account else { return }
-                apiManager.postAccount(account: result, platform: .Kakao)
+                apiManager.postAccount(account: result)
             }
         }
     }
