@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoryListCell: View {
     var body: some View {
         VStack{
-            NavigationLink(destination: RecommendDetailView()) {
+            NavigationLink(destination: RecommendDetailView( recommendData: Dummy.recommendBoards[0])) {
                 HStack {
                     Image("vynil")
                         .resizable()

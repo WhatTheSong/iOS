@@ -19,6 +19,7 @@ struct HomeView: View {
                     
                     ForEach(MeditationData.data.indices) { index in
                         RecordCell(meditation : MeditationData.data[index], recordCellLocation: .Home)
+                            .padding(.bottom, 20)
                     }
                 }
                 .frame(width: UIScreen.screenWidth - 20)
