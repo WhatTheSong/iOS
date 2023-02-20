@@ -26,16 +26,17 @@ struct RecordCell: View {
             
             if recordCellLocation == .Home {
                 NavigationView{
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(meditation: meditation))
+                    {
                         HStack(){
                             Image("vynil")
                                 .resizable()
                                 .frame(width: 80,height: 80)
                             
                             Spacer()
-                                .frame(width: 30)
+                                .frame(width: 20)
                             
-                            ExplainView(content: "가나다라마바사아자차카타파하")
+                            ExplainView(content: meditation.description)
                         }
                     }
                 }
@@ -49,7 +50,7 @@ struct RecordCell: View {
                     Spacer()
                         .frame(width: 30)
                     
-                    ExplainView(content: "가나다라마바사아자차카타파하")
+                    ExplainView(content: meditation.description)
                 }
                 .frame(height: 120)
             }
@@ -91,14 +92,14 @@ struct RecordCell: View {
                 }
             }
         }
-        .padding(5)
+        .padding(20)
         .onReceive(timer) { _ in
-            
             guard let player = audioManager.player, !isEditing else { return }
             silderValue = player.currentTime
         }
         .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.ourOrange, lineWidth: 2))
+            .stroke(Color.ourOrange, lineWidth: 2)
+        )
         
     }
     

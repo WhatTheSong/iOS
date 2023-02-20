@@ -9,8 +9,8 @@ import Foundation
 
 
 public enum URLs {
-    public static let baseURL = "https://whatthesong.store/"
-    public static let testURL = "https://test.whatthesong.store/"
+    public static let baseURL = "https://whatthesong.store"
+    public static let testURL = "https://test.whatthesong.store"
     
     // Account
     public static let tokenURL = "/app/users/token"
@@ -20,7 +20,9 @@ public enum URLs {
     public static let deleteUserURL = "/app/users/"
     
     
-    // Commnet
+    //TOKEN
+    public static let accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyMCwiaWF0IjoxNjc2Mzc2NTA2LCJleHAiOjE2NzYzNzgzMDYsInN1YiI6IkFDQ0VTU19UT0tFTiJ9.Zem-IPRDk_hYUJViLFMhWeGQ0JKdbZq44yBxFLI1_QA"
+    public static let refreshToken = "REFRESH"
     
 }
 

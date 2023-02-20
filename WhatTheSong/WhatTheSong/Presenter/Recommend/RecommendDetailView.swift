@@ -10,21 +10,21 @@ import SwiftUI
 struct RecommendDetailView: View {
     @State var isShowingReportView: Bool = false
     @State private var showingBottomView = false
-    
+    var recommendData: RecommendBoard
     var body: some View {
         VStack {
             NavigationStack {
                 // 게시글 사진
-                Image("vynil")
+                Image(recommendData.imageName)
                     .resizable()
                     .frame(width:100,height: 100)
                 // 좋아요 숫자
-                Text("좋아요 숫자")
+                Text("0")
                 // 게시글 내용
                 Group {
                     VStack {
                         Spacer()
-                        Text("내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용")
+                        Text(recommendData.description)
                             
                     }
                 }
@@ -72,6 +72,6 @@ struct RecommendDetailView: View {
 
 struct RecommendDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendDetailView()
+        RecommendDetailView(recommendData: RecommendBoard(title: "HI", description: "hi", imageName: "hi", category: .Rock))
     }
 }
