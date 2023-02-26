@@ -32,6 +32,7 @@ struct SettingView: View {
                     }
                     .listStyle(InsetListStyle())
                 }
+                .scrollDisabled(true)
                 .frame(width:UIScreen.screenWidth-45, height: 80)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2))
@@ -53,6 +54,7 @@ struct SettingView: View {
                         Text("1.0.0")
                     }
                 }
+                .scrollDisabled(true)
                 .listStyle(InsetListStyle())
                 .frame(width:UIScreen.screenWidth-45, height: 130)
                 .overlay(
