@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailView: View {
+    let meditation: Meditation
+
     @State private var showingBottomView = false
     @State private var isShowingReportView = false
     
@@ -61,6 +63,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(meditation: MeditationData.data[0])
     }
 }
