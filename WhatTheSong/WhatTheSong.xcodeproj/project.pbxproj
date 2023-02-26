@@ -592,7 +592,9 @@
 				6FDFBC78299BD34D00BD4007 /* StorageAPIManager.swift */,
 			);
 			path = StorageAPI;
-
+           sourceTree = "<group>";
+        };
+            
 		4F95E8A429A9883000395D5A /* API */ = {
 			isa = PBXGroup;
 			children = (
