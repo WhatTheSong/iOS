@@ -11,7 +11,6 @@ import Alamofire
 
 class AccountManager {
     
-  
     let baseURL = URLs.testURL
     
     func postKakaoAccount(account: AccountModel) {
