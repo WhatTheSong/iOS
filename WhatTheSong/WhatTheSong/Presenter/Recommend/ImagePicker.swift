@@ -48,6 +48,9 @@ extension ImagePicker {
                 guard let imageUrl = info[.imageURL] as? URL else { return }
                 guard let imageName = imageUrl.lastPathComponent as? String else { return }
                 parent.imageName = imageName
+                
+                StorageAPIManager().postImage(imgData: image, imageName: imageName)
+                
             }
         }
 }
