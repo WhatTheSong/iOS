@@ -75,6 +75,9 @@
 		6F72FB6C298EAF5700378201 /* WriteRecommendSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F72FB6B298EAF5700378201 /* WriteRecommendSongView.swift */; };
 		6FA23CC329718BEC003BD05A /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA23CC229718BEC003BD05A /* WriteView.swift */; };
 		6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1C63029865E050033D1F4 /* AudioPlay.swift */; };
+		6FDFBC72299BC44100BD4007 /* StorageURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFBC71299BC44100BD4007 /* StorageURLs.swift */; };
+		6FDFBC75299BCAFC00BD4007 /* StorageParamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFBC74299BCAFC00BD4007 /* StorageParamManager.swift */; };
+		6FDFBC79299BD34D00BD4007 /* StorageAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFBC78299BD34D00BD4007 /* StorageAPIManager.swift */; };
 		6FF2652D29936D79000311F7 /* StateOfCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2652C29936D78000311F7 /* StateOfCategory.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +151,9 @@
 		6F72FB6B298EAF5700378201 /* WriteRecommendSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRecommendSongView.swift; sourceTree = "<group>"; };
 		6FA23CC229718BEC003BD05A /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		6FD1C63029865E050033D1F4 /* AudioPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlay.swift; sourceTree = "<group>"; };
+		6FDFBC71299BC44100BD4007 /* StorageURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageURLs.swift; sourceTree = "<group>"; };
+		6FDFBC74299BCAFC00BD4007 /* StorageParamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageParamManager.swift; sourceTree = "<group>"; };
+		6FDFBC78299BD34D00BD4007 /* StorageAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAPIManager.swift; sourceTree = "<group>"; };
 		6FF2652C29936D78000311F7 /* StateOfCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateOfCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -527,6 +533,9 @@
 		04F55211299BB54B00AE193B /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				6FDFBC70299BC40F00BD4007 /* StorageAPI */,
+				6FDFBC6F299BC40400BD4007 /* StorageFoundation */,
+				6FDFBC6E299BC37200BD4007 /* StorageService */,
 				04F5521B299BB62C00AE193B /* Sample2.swift */,
 			);
 			path = Storage;
@@ -560,6 +569,30 @@
 			path = Report;
 			sourceTree = "<group>";
 		};
+
+		6FDFBC6E299BC37200BD4007 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
+		6FDFBC6F299BC40400BD4007 /* StorageFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				6FDFBC71299BC44100BD4007 /* StorageURLs.swift */,
+				6FDFBC74299BCAFC00BD4007 /* StorageParamManager.swift */,
+			);
+			path = StorageFoundation;
+			sourceTree = "<group>";
+		};
+		6FDFBC70299BC40F00BD4007 /* StorageAPI */ = {
+			isa = PBXGroup;
+			children = (
+				6FDFBC78299BD34D00BD4007 /* StorageAPIManager.swift */,
+			);
+			path = StorageAPI;
+
 		4F95E8A429A9883000395D5A /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +616,7 @@
 				4F95E8AD29A9924200395D5A /* BoardManager.swift */,
 			);
 			path = Service;
+
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -673,6 +707,7 @@
 				04654B9F298ED8EA00BE56E4 /* CategoryCell.swift in Sources */,
 				04383B33296D206200C20294 /* WhatTheSongApp.swift in Sources */,
 				6F72FB6A298EA6EE00378201 /* ImagePicker.swift in Sources */,
+				6FDFBC72299BC44100BD4007 /* StorageURLs.swift in Sources */,
 				04C2C4EC298A510800B5316B /* APIManager.swift in Sources */,
 				6F32500D2976D57500BE5F55 /* RecordingDataModel.swift in Sources */,
 				04654BAC298FA35F00BE56E4 /* TabbarItems.swift in Sources */,
@@ -689,8 +724,12 @@
 				4F61BBF82976CC5200F53D38 /* ExplainView.swift in Sources */,
 				04179F6429A092DA00B69F6E /* RecommendBoard.swift in Sources */,
 				04F55218299BB62500AE193B /* Sample3.swift in Sources */,
+
+				6FDFBC79299BD34D00BD4007 /* StorageAPIManager.swift in Sources */,
+
 				04179F6229A0512F00B69F6E /* Dummy.swift in Sources */,
 				045234BB299E5A4600AC0C62 /* NotiAPIManager.swift in Sources */,
+
 				6F72FB6C298EAF5700378201 /* WriteRecommendSongView.swift in Sources */,
 				4F39627C298C05E900B1548E /* ProfileView.swift in Sources */,
 				6FF2652D29936D79000311F7 /* StateOfCategory.swift in Sources */,
@@ -717,6 +756,7 @@
 				04AB92692977C24300E7DDB7 /* DetailView.swift in Sources */,
 				041843562971B7A900EC4778 /* CommentView.swift in Sources */,
 				04654B9D298ED8E100BE56E4 /* CategoryView.swift in Sources */,
+				6FDFBC75299BCAFC00BD4007 /* StorageParamManager.swift in Sources */,
 				6FD1C63129865E050033D1F4 /* AudioPlay.swift in Sources */,
 				0418435D2971D17300EC4778 /* ReCommentView.swift in Sources */,
 				04A8930E299370F300D3DC40 /* UserSession.swift in Sources */,
