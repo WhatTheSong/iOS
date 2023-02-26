@@ -14,6 +14,8 @@ struct RecordCell: View {
     @State private var isEditing: Bool = false
     @State private var silderValue: Double = 0.0
     
+    var recordCellLocation: RecordCellLocation
+    
     let timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
@@ -21,17 +23,38 @@ struct RecordCell: View {
     var body: some View {
         let player = audioManager.player
         VStack(){
-            HStack(){
-                Image("vynil")
-                    .resizable()
-                    .frame(width: 80,height: 80)
-                
-                Spacer()
-                    .frame(width: 15)
-                
-                ExplainView()
+            
+            if recordCellLocation == .Home {
+                NavigationView{
+                    NavigationLink(destination: DetailView(meditation: meditation))
+                    {
+                        HStack(){
+                            Image("vynil")
+                                .resizable()
+                                .frame(width: 80,height: 80)
+                            
+                            Spacer()
+                                .frame(width: 20)
+                            
+                            ExplainView(content: meditation.description)
+                        }
+                    }
+                }
+                .frame(height: 120)
+            } else {
+                HStack(){
+                    Image("vynil")
+                        .resizable()
+                        .frame(width: 80,height: 80)
+                    
+                    Spacer()
+                        .frame(width: 30)
+                    
+                    ExplainView(content: meditation.description)
+                }
+                .frame(height: 120)
             }
-            .padding(15)
+            
             
             HStack{
                 // MARK: Play Button
@@ -71,13 +94,12 @@ struct RecordCell: View {
         }
         .padding(20)
         .onReceive(timer) { _ in
-            
             guard let player = audioManager.player, !isEditing else { return }
             silderValue = player.currentTime
         }
-        .padding(-15)
         .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(.gray, lineWidth: 4))
+            .stroke(Color.ourOrange, lineWidth: 2)
+        )
         
     }
     
@@ -85,6 +107,6 @@ struct RecordCell: View {
 
 struct RecordCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecordCell(meditation: MeditationData.data[0])
+        RecordCell(meditation: MeditationData.data[0], recordCellLocation: .Home)
     }
 }

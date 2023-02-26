@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
         }
         .onAppear() {
-                UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = .white
         }
     }
 }

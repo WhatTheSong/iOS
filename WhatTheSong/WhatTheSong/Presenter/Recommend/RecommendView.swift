@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct RecommendView: View {
+    @State var selectedCategoryNameFinal: String?
+    @State var categoryNameFinal: String?
     
-    let people = ["서근", "슬기", "나비", "희진"]
-    let categories = ["발라드", "뮤지컬", "락", "댄스", "힙합", "K-POP", "클래식", "POP"]
+    func setCategoryName() {
+        self.categoryNameFinal = selectedCategoryNameFinal
+        print("마지막 \(categoryNameFinal)")
+    }
     
     var body: some View {
         NavigationStack {
@@ -20,16 +24,23 @@ struct RecommendView: View {
                 List {
                     Section{
                         categoryHeader(title: "카테고리")
-                        CategoryView()
+                        CategoryView(stateOfCategory: .small, categoryName: $selectedCategoryNameFinal)
                             .listRowSeparator(.hidden)
                     }
-                    ForEach(categories, id: \.self) { category in
+                    ForEach(Categories.allCases, id: \.self) { category in
                         Section {
-                            categoryHeader(title: category)
+                            categoryHeader(title: category.rawValue)
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach(0...5, id: \.self) { index in
-                                        ThumbnailView()
+                                    ForEach(Dummy.recommendBoards, id: \.self) { item in
+                                        if item.category == category {
+                                            NavigationLink(destination: RecommendDetailView(recommendData: item)) {
+                                                ThumbnailView(item: item)
+                                                Spacer()
+                                                    .frame(width: 30)
+                                            }
+                                           
+                                        }
                                     }
                                 }
                                 

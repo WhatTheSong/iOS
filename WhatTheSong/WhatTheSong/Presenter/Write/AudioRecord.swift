@@ -40,7 +40,7 @@ class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "dd-MM-YY 'at' HH:mm:ss"
+        dateformatter.dateFormat = "YY-MM-dd'at'HH:mm:ss"
         dateformatter.string(from: Date())
         
         let audioFilename = path.appendingPathComponent("\(dateformatter.string(from: Date())).m4a")
@@ -79,6 +79,11 @@ class AudioRecord: NSObject, ObservableObject, AVAudioPlayerDelegate {
         
         timerCount!.invalidate()
         blinkingCount!.invalidate()
+        //audio file upload 코드 추가
+        var recordingURL = recordingList.last!.fileURL
+        var recordingName = recordingURL.lastPathComponent
+        
+        StorageAPIManager().postRecording(recordingURL: recordingURL, recordingName: recordingName)
     }
     
     func fetchRecording() {

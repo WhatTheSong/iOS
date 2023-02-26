@@ -19,7 +19,7 @@ struct ReportView: View {
     
     @State var title: String
     var nickname: String
-        
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .leading){
@@ -48,6 +48,9 @@ struct ReportView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2))
                 
+                Spacer()
+                    .frame(height: 30)
+                
                 VStack(alignment: .leading){
                     Text("'\(nickname)'")
                     Spacer()
@@ -60,10 +63,15 @@ struct ReportView: View {
                 NavigationLink(destination: ReportSendView(selection: $selection, title: $title)) {
                     Text("사용자 신고하러 가기")
                 }
-                .offset(x:20, y:40)
+                .disabled(selection == "")
+                .frame(width: UIScreen.screenWidth-40, height:35)
+                .tint(.black)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color(UIColor(Color.ourOrange)), lineWidth: 2))
+                .offset(y:15)
+                
                 
                 Spacer()
-                
             }
             .navigationTitle("게시글 신고")
             .scrollContentBackground(.hidden)

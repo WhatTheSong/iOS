@@ -27,7 +27,7 @@ struct WriteView: View {
                         
                     }else{
                         audioPlaying.startPlaying(url: audioRecording.recordingList.last!.fileURL)
-//                        let _ = print("헌 녹음 \(audioRecording.recordingObj!.fileURL)")
+                        let _ = print("헌 녹음 \(audioRecording.recordingList.last!.fileURL.lastPathComponent)")
                     }
                 }) {
                     Image(systemName: audioPlaying.isPlaying ? "stop.fill" : "play.fill")

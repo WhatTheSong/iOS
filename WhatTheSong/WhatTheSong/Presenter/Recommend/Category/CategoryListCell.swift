@@ -10,30 +10,33 @@ import SwiftUI
 struct CategoryListCell: View {
     var body: some View {
         VStack{
-            HStack {
-                Image("vynil")
-                    .resizable()
-                    .frame(width:50,height: 50)
-                    .padding(.bottom, 10)
-                
-                VStack(alignment: .leading) {
-                    HStack{
-                       stereoEffect()
-                        VStack(alignment: .leading) {
-                            Text ("제목")
-                                .font(.system(size: 18, weight: .semibold))
-                            Text("간단한 요약")
-                            
+            NavigationLink(destination: RecommendDetailView( recommendData: Dummy.recommendBoards[0])) {
+                HStack {
+                    Image("vynil")
+                        .resizable()
+                        .frame(width:50,height: 50)
+                        .padding(.bottom, 10)
+                    
+                    VStack(alignment: .leading) {
+                        HStack{
+                           stereoEffect()
+                            VStack(alignment: .leading) {
+                                Text ("제목")
+                                    .font(.system(size: 18, weight: .semibold))
+                                Text("간단한 요약")
+                                
+                            }
+                            Spacer()
+                            Text("100")
+                                .padding()
                         }
-                        Spacer()
-                        Text("100")
-                            .padding()
+                        Rectangle()
+                            .frame(width: UIScreen.screenWidth - 70,height: 2)
+                            .foregroundColor(.ourOrange)
                     }
-                    Rectangle()
-                        .frame(width: UIScreen.screenWidth - 70,height: 2)
-                        .foregroundColor(.ourOrange)
                 }
             }
+            
             
         
         }

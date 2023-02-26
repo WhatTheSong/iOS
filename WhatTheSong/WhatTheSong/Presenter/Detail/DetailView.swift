@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct DetailView: View {
+    let meditation: Meditation
+
     @State private var showingBottomView = false
     @State private var isShowingReportView = false
     
 
     var body: some View {
         NavigationStack {
-            RecordCell(meditation: MeditationData.data[0])
+            RecordCell(meditation: MeditationData.data[0], recordCellLocation: .NotHome)
                 .toolbar {
                     ToolbarItem {
                         Button(action: {
@@ -55,11 +57,12 @@ struct DetailView: View {
             }
             .animation(.easeIn, value: isShowingReportView)
         }
+        .accessibilityElement()
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(meditation: MeditationData.data[0])
     }
 }

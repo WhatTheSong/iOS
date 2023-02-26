@@ -10,24 +10,23 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationStack{
-            VStack(){
-                TitleView(title: "질문", tabbarItem: .Home)
-                
+            VStack{
+                TitleView(title: "왓쏭 - What Song", tabbarItem: .Home)
                 
                 // MARK: 테이블 뷰
-                List(){
+                ScrollView{
+                    Spacer()
+                    
                     ForEach(MeditationData.data.indices) { index in
-                        VStack(alignment: .leading){
-                            RecordCell(meditation : MeditationData.data[index])
-                        }
+                        RecordCell(meditation : MeditationData.data[index], recordCellLocation: .Home)
+                            .padding(.bottom, 20)
                     }
                 }
-                .listStyle(PlainListStyle())
+                .frame(width: UIScreen.screenWidth - 20)
                 .scrollContentBackground(.hidden)
             }
         }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
